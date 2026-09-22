@@ -1,17 +1,17 @@
 {
-  "name": "GeneoGraph",
-  "short_name": "GeneoGraph",
-  "description": "Genealogy research and visualization workspace.",
-  "start_url": "/",
-  "display": "browser",
-  "background_color": "#0B0F0E",
-  "theme_color": "#0B0F0E",
-  "icons": [
-    {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    }
-  ]
+    "name": "GeneoGraph",
+    "short_name": "GeneoGraph",
+    "description": "Genealogy research and visualization workspace.",
+    "start_url": "/",
+    "display": "browser",
+    "background_color": "#0B0F0E",
+    "theme_color": "#0B0F0E",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
 }
