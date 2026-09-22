@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "Deploy landing"
+
+on:
+    push:
+        branches:
+            - "default"
+        paths:
+            - ".github/workflows/**"
+            - "src/**"
+            - "*.html"
+            - "*.css"
+            - "*.js"
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+concurrency:
+    group: pages
+    cancel-in-progress: true
+
+defaults:
+    run:
+        shell: pwsh
+
+jobs:
+    build-landing:
+        name: "Build landing"
+
+        strategy:
+            matrix:
+                system:
+                    - ubuntu-24.04
+
+        runs-on: ${{ matrix.system }}
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v7
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v7
+              with:
+                  node-version-file: .node-version
+
+            - name: Cache dependencies
+              uses: actions/cache@v6
+              with:
+                  key: Landing-${{ hashFiles('package-lock.json') }}
+                  restore-keys: |
+                      Landing-${{ hashFiles('package-lock.json') }}
+                      Landing-
+                  path: |
+                      .npm/_cacache/
+                  enableCrossOsArchive: true
+
+            - name: Get dependencies
+              run: |
+                  npm clean-install
+
+            - name: Build landing
+              run: |
+                  npm run build
+
+            - name: Upload landing
+              id: deployment
+              uses: actions/upload-pages-artifact@v5
+              with:
+                  path: ${{ github.workspace }}/dist
+
+    deploy-landing:
+        name: "Deploy landing"
+
+        needs:
+            - build-landing
+
+        strategy:
+            matrix:
+                system:
+                    - ubuntu-24.04
+
+        runs-on: ${{ matrix.system }}
+
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
+        steps:
+            - name: Deploy landing
+              id: deployment
+              uses: actions/deploy-pages@v5
