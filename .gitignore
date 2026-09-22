@@ -3,3 +3,8 @@
 # System cache
 .DS_Store
 Thumbs.db
+
+# NPM cache
+.npm/
+node_modules/
+npm-debug.log*

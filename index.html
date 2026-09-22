@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeneoGraph — Genealogy Research &amp; Visualization</title>
+    <meta name="description" content="Organize genealogy research, connect family-history materials and explore complicated family relationships visually with GeneoGraph.">
+    <meta name="theme-color" content="#0B0F0E">
+    <link rel="canonical" href="https://geneograph.com/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geneograph.com/">
+    <meta property="og:site_name" content="GeneoGraph">
+    <meta property="og:title" content="GeneoGraph — Genealogy Research &amp; Visualization">
+    <meta property="og:description" content="Organize genealogy research, connect family-history materials and explore complicated family relationships visually with GeneoGraph.">
+    <meta property="og:image" content="https://geneograph.com/og-geneograph.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="GeneoGraph research board connecting people, records, notes and possible family relationships.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GeneoGraph — Genealogy Research &amp; Visualization">
+    <meta name="twitter:description" content="A private workspace for connected family-history research.">
+    <meta name="twitter:image" content="https://geneograph.com/og-geneograph.png">
+    <script type="module" src="/src/landing/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-site-header>
+      <div class="header-inner">
+        <a class="brand-lockup" href="/" aria-label="GeneoGraph home">
+          <img src="/src/brand/logo.svg" width="31" height="28" alt="">
+          <span>GeneoGraph</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-nav-toggle>
+          <span class="sr-only">Open navigation</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Primary navigation" data-primary-nav>
+          <a href="#about">About</a>
+          <a href="/demo/">Demo</a>
+          <a href="#research-group">Research Group</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-board" data-product-visual aria-label="GeneoGraph research board connecting people, records and working hypotheses">
+          <svg class="hero-connections" viewBox="0 0 1000 590" preserveAspectRatio="none" aria-hidden="true">
+            <path class="line confirmed" d="M180 165H355V270H492"/>
+            <path class="line confirmed" d="M670 142H585V270H492"/>
+            <path class="line possible" d="M492 332V424H738"/>
+            <path class="line evidence" d="M492 332V466H265"/>
+          </svg>
+          <article class="board-person person-one"><span class="board-avatar">BW</span><span><strong>Barnaby Whiskerfield</strong><small>1946–2018</small></span></article>
+          <article class="board-person person-two">
+            <picture class="board-photo"><source srcset="/src/landing/assets/unidentified-studio-portrait.webp" type="image/webp"><img src="/src/assets/sample-photos/unidentified-studio-portrait.jpg" width="64" height="64" alt="Sample archival portrait"></picture>
+            <span><strong>Daisy Milkpaw</strong><small>1949–2020</small></span>
+          </article>
+          <article class="board-person person-unknown"><span class="board-avatar unknown">?</span><span><strong>Unknown person</strong><small>Identity unresolved</small></span></article>
+          <article class="board-note"><span class="object-label">Research note</span><strong>Who appears beside Daisy?</strong><p>Compare the studio portrait with the 1974 household register.</p></article>
+          <article class="board-document"><span class="document-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v5h5M10 12h5M10 16h5"/></svg></span><span><strong>Household register</strong><small>Source · 1974</small></span></article>
+          <span class="line-label confirmed-label">Confirmed</span>
+          <span class="line-label possible-label">Possible relationship</span>
+          <span class="board-canvas-label">Pawford research board</span>
+        </div>
+        <div class="hero-content section-inner">
+          <span class="status-chip"><span aria-hidden="true"></span>Interactive prototype · Currently in development</span>
+          <h1 id="hero-title">Genealogy research gets complicated.<br>Your tools shouldn’t.</h1>
+          <p>GeneoGraph is a private workspace for organizing, connecting and visualizing your family-history research.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="/demo/" data-analytics-event="hero_demo_click">Try the Interactive Demo</a>
+            <a class="button secondary" href="#research-group" data-analytics-event="research_group_click">Join the Research Group</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fragmentation-section" id="about" aria-labelledby="fragmentation-title">
+        <div class="section-inner split-section">
+          <div class="section-copy"><span class="eyebrow">One research workspace</span><h2 id="fragmentation-title">Your research doesn’t live in one place.</h2><p>The hardest part isn’t storing everything. It’s keeping track of how it all relates.</p></div>
+          <div class="fragmentation-visual" aria-label="Research materials converging into GeneoGraph">
+            <div class="material-cloud"><span>Family tree</span><span>Documents</span><span>Photos</span><span>Notes</span><span>Spreadsheets</span><span>Screenshots</span><span>Research questions</span><span>Hand-drawn diagrams</span></div>
+            <svg viewBox="0 0 630 300" aria-hidden="true"><path d="M84 54C180 54 185 150 286 150M84 112C170 112 196 150 286 150M84 188C170 188 196 150 286 150M84 246C180 246 185 150 286 150M546 54C450 54 445 150 344 150M546 112C460 112 434 150 344 150M546 188C460 188 434 150 344 150M546 246C450 246 445 150 344 150"/></svg>
+            <div class="converge-mark"><img src="/src/brand/logo.svg" width="42" height="38" alt=""><strong>GeneoGraph</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section connected-section" aria-labelledby="connected-title">
+        <div class="section-inner">
+          <div class="section-heading centered"><span class="eyebrow">Connected context</span><h2 id="connected-title">Keep the pieces connected.</h2><p>A person is more than a name in a family tree. GeneoGraph keeps the documents, photographs, notes and research around them connected to the same project.</p></div>
+          <div class="connection-map" aria-label="Silver Whiskerfield connected to a document, photo, note, place and research board">
+            <svg viewBox="0 0 1000 440" preserveAspectRatio="none" aria-hidden="true"><path d="M500 220L190 92M500 220L810 92M500 220L145 336M500 220L500 390M500 220L855 336"/></svg>
+            <article class="entity person"><span class="entity-icon initials">SW</span><span><small>Person</small><strong>Silver Whiskerfield</strong></span></article>
+            <article class="entity document"><span class="entity-icon">▤</span><span><small>Document</small><strong>Birth register</strong></span></article>
+            <article class="entity photo"><span class="entity-icon">▧</span><span><small>Photo</small><strong>Family portrait</strong></span></article>
+            <article class="entity note"><span class="entity-icon">✎</span><span><small>Note</small><strong>Surname research</strong></span></article>
+            <article class="entity place"><span class="entity-icon">⌖</span><span><small>Place</small><strong>Pawford</strong></span></article>
+            <article class="entity board"><span class="entity-icon">◇</span><span><small>Research board</small><strong>Maternal line</strong></span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section hypothesis-section" id="geneograph" aria-labelledby="hypothesis-title">
+        <div class="section-inner">
+          <div class="hypothesis-intro"><div><span class="eyebrow">Geneograph boards</span><h2 id="hypothesis-title">Not every branch is certain.</h2></div><p>Genealogy research often lives somewhere between “I know” and “I think.” Geneograph gives you a visual space to explore possible relationships, compare theories and organize evidence without treating every idea as a confirmed fact.</p></div>
+          <div class="belief-comparison" role="list" aria-label="Family tree and Geneograph comparison">
+            <div role="listitem"><span class="relationship-key solid" aria-hidden="true"></span><strong>A normal family tree represents what I currently believe to be true.</strong></div>
+            <div role="listitem"><span class="relationship-key dashed" aria-hidden="true"></span><strong>Geneograph can also represent what I am still investigating.</strong></div>
+          </div>
+          <div class="hypothesis-board" aria-label="Research board showing confirmed and possible family connections">
+            <svg viewBox="0 0 1200 490" preserveAspectRatio="none" aria-hidden="true"><path class="confirmed" d="M224 132H472M348 132V252H596"/><path class="confirmed" d="M722 132H970M846 132V252H596"/><path class="possible" d="M596 310V390H890"/><path class="evidence" d="M596 310V390H296"/></svg>
+            <article class="research-person p1"><span>AW</span><strong>Archibald</strong><small>Confirmed person</small></article><article class="research-person p2"><span>EW</span><strong>Edith</strong><small>Confirmed person</small></article><article class="research-person p3"><span>PM</span><strong>Percival</strong><small>Confirmed person</small></article><article class="research-person p4"><span>NM</span><strong>Nora</strong><small>Confirmed person</small></article><article class="research-person child"><span>?</span><strong>Unidentified child</strong><small>Working hypothesis</small></article>
+            <article class="evidence-card evidence-one"><small>Supporting evidence</small><strong>Studio portrait, c. 1974</strong><span>Faces and date are consistent</span></article><article class="evidence-card evidence-two"><small>Research note</small><strong>Compare household entries</strong><span>Relationship remains unresolved</span></article>
+            <span class="route-tag confirmed-tag">Solid · Confirmed</span><span class="route-tag possible-tag">Dashed · Possible</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section visualization-section" aria-labelledby="visualization-title">
+        <div class="section-inner">
+          <div class="section-heading"><span class="eyebrow">Flexible family charts</span><h2 id="visualization-title">Make the family chart you actually want.</h2><p>Standard family trees are useful, but not every family or story fits a preset layout. Arrange people freely, add photographs and notes, and create a visual family chart without learning professional design software.</p></div>
+          <div class="visualization-flow" aria-label="Family data becomes a Geneograph board and then a finished visual chart">
+            <article><span class="flow-number">01</span><div class="flow-data"><i></i><i></i><i></i><i></i></div><strong>Family data</strong><small>People, places and sources</small></article><span class="flow-arrow" aria-hidden="true">→</span><article><span class="flow-number">02</span><div class="flow-board"><b></b><b></b><b></b><em></em></div><strong>Geneograph board</strong><small>Arrange and annotate freely</small></article><span class="flow-arrow" aria-hidden="true">→</span><article class="finished-chart"><span class="flow-number">03</span><div class="flow-chart"><b></b><b></b><b></b><b></b><em>Created with Geneograph</em></div><strong>Finished visual chart</strong><small>Export as a shareable PNG</small></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section local-section" aria-labelledby="local-title">
+        <div class="section-inner split-section"><div class="section-copy"><span class="eyebrow">Product direction</span><h2 id="local-title">Your family history should be yours.</h2><p>GeneoGraph is being designed as a local-first application, allowing the core family-history workspace to live on your own computer instead of making cloud storage mandatory.</p></div><div class="direction-list"><article><span aria-hidden="true">01</span><div><strong>Local projects</strong><p>Workspaces designed to live on your computer.</p></div></article><article><span aria-hidden="true">02</span><div><strong>Portable data</strong><p>A direction toward projects that can move with you.</p></div></article><article><span aria-hidden="true">03</span><div><strong>Optional online services later</strong><p>Future services should complement, not replace, local ownership.</p></div></article></div></div>
+      </section>
+
+      <section class="section demo-section" id="demo" aria-labelledby="demo-title"><div class="section-inner demo-callout"><div><span class="status-chip"><span aria-hidden="true"></span>Interactive prototype</span><h2 id="demo-title">Explore GeneoGraph yourself.</h2><p>The current interactive prototype demonstrates the product concept and major workflows. Some functionality is experimental and not yet production-ready.</p><p class="demo-guide">The demo includes a guided introduction to help you explore the main ideas.</p></div><div class="demo-action"><a class="button primary" href="/demo/" data-analytics-event="demo_open">Open the Interactive Demo</a><small>Best explored on desktop. Mobile access remains available.</small></div></div></section>
+
+      <section class="section research-section" id="research-group" aria-labelledby="research-title">
+        <div class="section-inner research-layout">
+          <div class="section-copy"><span class="eyebrow">Early research group</span><h2 id="research-title">Help shape GeneoGraph.</h2><p>GeneoGraph is being developed with feedback from real genealogists. Join the research group to test new ideas, try future versions and help decide what gets built next.</p><ul class="research-benefits"><li>Test emerging workflows</li><li>Share real research challenges</li><li>Influence what gets built next</li></ul></div>
+          <form class="research-form" data-research-form data-analytics-event="research_signup_completed" novalidate>
+            <div class="form-heading"><strong>Join the research group</strong><span>No account required.</span></div>
+            <div class="field"><label for="research-email">Email <span aria-hidden="true">*</span></label><input id="research-email" name="email" type="email" autocomplete="email" required aria-describedby="research-email-error"><span class="field-error" id="research-email-error" data-email-error></span></div>
+            <div class="field"><label for="research-role">I am a <span class="optional">Optional</span></label><select id="research-role" name="role"><option value="">Select one</option><option>Genealogy enthusiast</option><option>Professional genealogist</option><option>Family archivist</option><option>Researcher</option><option>Other</option></select></div>
+            <button class="button primary form-submit" type="submit" data-signup-submit>Join the Research Group</button>
+            <p class="form-privacy">This prototype does not send your information unless a signup service is configured.</p><div class="form-status" role="status" aria-live="polite" data-form-status></div>
+            <fieldset class="follow-up" data-follow-up hidden><legend>What is the hardest part of your genealogy research right now?</legend><div class="radio-list"><label><input type="radio" name="challenge" value="Organizing research">Organizing research</label><label><input type="radio" name="challenge" value="Keeping track of evidence">Keeping track of evidence</label><label><input type="radio" name="challenge" value="Working with uncertain relationships">Working with uncertain relationships</label><label><input type="radio" name="challenge" value="Creating visual charts">Creating visual charts</label><label><input type="radio" name="challenge" value="Managing documents and photographs">Managing documents and photographs</label><label><input type="radio" name="challenge" value="Something else">Something else</label></div><button class="button secondary" type="button" data-feedback-submit>Share feedback</button></fieldset>
+          </form>
+        </div>
+      </section>
+
+      <section class="section context-section" aria-labelledby="context-title"><div class="section-inner context-copy"><span class="eyebrow">Project context</span><h2 id="context-title">Built from real genealogy research.</h2><p>GeneoGraph grew from hands-on genealogy research and the frustration of trying to manage complex family-history work across many different tools.</p><div class="founder-placeholder" aria-label="Founder information will be added later"><span>Founder information</span><strong>To be added</strong></div></div></section>
+      <section class="section support-section" id="support" aria-labelledby="support-title"><div class="section-inner support-copy"><div><span class="eyebrow">Independent development</span><h2 id="support-title">Support GeneoGraph</h2><p>GeneoGraph is currently being developed independently. If you’d like to help support continued development, you can contribute to the project.</p></div><div data-support-action><span class="coming-later">Support options coming later</span></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="section-inner footer-inner"><a class="brand-lockup footer-brand" href="/" aria-label="GeneoGraph home"><img src="/src/brand/logo.svg" width="27" height="24" alt=""><span>GeneoGraph</span></a><nav aria-label="Footer navigation" class="footer-links" data-footer-links><a href="/demo/">Demo</a><a href="#research-group">Research Group</a><span aria-disabled="true" data-config-link="contactUrl">Contact <small>Coming later</small></span><span aria-disabled="true" data-config-link="privacyUrl">Privacy <small>Coming later</small></span><span aria-disabled="true" data-config-link="supportUrl">Support <small>Coming later</small></span><span aria-disabled="true" data-config-link="collaboratorsUrl">For collaborators &amp; investors <small>Coming later</small></span></nav><p>Interactive prototype · Currently in development</p></div></footer>
+  </body>
+</html>
