@@ -10,7 +10,7 @@ export default defineConfig({
   },
   webServer: {
     command: 'vite --host 127.0.0.1 --port 4173',
-    url: 'http://127.0.0.1:4173/demo/',
+    url: 'http://127.0.0.1:4173/',
     reuseExistingServer: true,
   },
 });
