@@ -2,12 +2,47 @@
 
 * text=auto
 
-# Text files
+# Text documents
 *.txt text eol=crlf encoding=utf-8
 
 # Image files
 *.ico binary
 *.png binary
+*.svg binary
+*.webp binary
 
-# Markdown files
+# Markdown documents
 *.md text eol=crlf encoding=utf-8
+
+# HTML documents
+*.htm text eol=lf encoding=utf-8
+*.html text eol=lf encoding=utf-8
+
+# CSS styles
+*.css text eol=lf encoding=utf-8
+
+# JSON documents
+*.json text eol=lf encoding=utf-8
+
+# JavaScript sources
+*.js text eol=lf encoding=utf-8
+
+# Git configs
+.gitattributes text eol=lf encoding=utf-8
+.gitignore text eol=lf encoding=utf-8
+
+# EditorConfig files
+.editorconfig text eol=crlf encoding=utf-8
+
+# Node.js and NVM configs
+.node-version text eol=lf encoding=utf-8
+.nvmrc text eol=lf encoding=utf-8
+
+# NPM configs
+.npmrc text eol=lf encoding=utf-8
+
+# NPM manifests
+package*.json text eol=lf encoding=utf-8
+
+# Vite configs
+vite.config.js text eol=lf encoding=utf-8

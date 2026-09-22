@@ -1,7 +1,7 @@
 # Enable top-most EditorConfig file
 root = true
 
-# Text files
+# Text documents
 [*.txt]
 charset = utf-8
 end_of_line = crlf
@@ -9,10 +9,87 @@ indent_size = 4
 indent_style = space
 insert_final_newline = true
 
-# Markdown files
+# Markdown documents
 [*.md]
 charset = utf-8
 end_of_line = crlf
 indent_size = 2
+indent_style = space
+insert_final_newline = true
+
+# HTML documents
+[*.{htm,html}]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# CSS styles
+[*.css]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# JSON documents
+[*.json]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# JavaScript sources
+[*.js]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# Git configs
+[.{gitattributes,gitignore}]
+charset = utf-8
+end_of_line = lf
+indent_style = tab
+insert_final_newline = true
+
+# EditorConfig configs
+[.editorconfig]
+charset = utf-8
+end_of_line = crlf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# Node.js and NVM configs
+[.{node-version,nvmrc}]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+# NPM configs
+[.npmrc]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+# NPM manifests
+[package*.json]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+
+# Vite configs
+[vite.config.js]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
 indent_style = space
 insert_final_newline = true
