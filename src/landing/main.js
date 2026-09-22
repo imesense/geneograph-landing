@@ -1,4 +1,4 @@
-import '../brand/brand.css';
+import './brand.css';
 import './landing.css';
 import { landingConfig } from './config.js';
 
