@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-23T17:14:10Z",
+  "title": "Design System: GeneoGraph landing",
+  "extensions": {
+    "colorMeta": {
+      "primary": {"role":"primary","displayName":"GeneoGraph green","canonical":"#66d58f","tonalRamp":["#0e2416","#173c25","#205b36","#2f7f4b","#46ac68","#66d58f","#a1ebba","#defae6"]},
+      "background": {"role":"neutral","displayName":"Workspace charcoal","canonical":"#0b100e","tonalRamp":["#0b100e","#17221b","#2b3b30","#46604e","#6c8973","#9eb2a2","#cbd7ce","#f2f5ef"]},
+      "possible": {"role":"tertiary","displayName":"Possible relationship amber","canonical":"#e3b579","tonalRamp":["#2a1d0d","#493018","#6b4623","#916337","#b88a52","#e3b579","#f0d4aa","#fbefdb"]}
+    },
+    "typographyMeta": {
+      "display": {"displayName":"Display","purpose":"Hero and major page statements."},
+      "body": {"displayName":"Body","purpose":"Explanatory copy and research context."}
+    },
+    "shadows": [{"name":"action-offset","value":"0 9px 25px rgba(4, 23, 12, .28)","purpose":"Primary CTA only."}],
+    "motion": [{"name":"state","value":"background .2s ease, transform .2s ease","purpose":"Restrained button feedback."}],
+    "breakpoints": [{"name":"tablet","value":"1050px"},{"name":"mobile","value":"760px"},{"name":"small-mobile","value":"480px"}]
+  },
+  "components": [
+    {
+      "name":"Primary demo action","kind":"button","refersTo":"button-primary","description":"Dominant green link to the interactive prototype.",
+      "html":"<a class=\"ds-button\" href=\"#\">Try Demo ↗</a>",
+      "css":".ds-button{display:inline-flex;align-items:center;min-height:52px;padding:13px 23px;border-radius:8px;background:#66d58f;color:#082012;text-decoration:none;font:800 14px Manrope,sans-serif;transition:background .2s ease,transform .2s ease}.ds-button:hover{background:#85e5a4;transform:translateY(-2px)}.ds-button:focus-visible{outline:3px solid #66d58f;outline-offset:5px}"
+    },
+    {
+      "name":"Person record","kind":"custom","refersTo":"family-person","description":"Compact named genealogy record used in relationship diagrams.",
+      "html":"<div class=\"ds-person\"><strong>Helen Bennett</strong><span>1918–2004</span></div>",
+      "css":".ds-person{display:flex;flex-direction:column;gap:3px;width:174px;padding:13px 16px;border:1px solid #69d990;border-radius:10px;background:#224734;color:#f2f5ef;font-family:Manrope,sans-serif}.ds-person strong{font-size:15px}.ds-person span{font-size:12px;color:#c2d1c4}"
+    },
+    {
+      "name":"Secondary text action","kind":"button","refersTo":"text-action","description":"Quiet alternative to the demo CTA.",
+      "html":"<a class=\"ds-text-action\" href=\"#\">See how it works ↓</a>",
+      "css":".ds-text-action{color:#f2f5ef;text-decoration:none;border-bottom:1px solid #96a799;padding-bottom:4px;font:800 14px Manrope,sans-serif}.ds-text-action:hover{color:#66d58f;border-color:#66d58f}.ds-text-action:focus-visible{outline:3px solid #66d58f;outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar":"Genealogy data with the freedom of a visual canvas.",
+    "overview":"The page feels like a calm, capable research workspace whose family visualization is the principal artifact. It demonstrates relationships and context at useful scale, then lets quieter typography explain the value. The established charcoal and green identity remains intact.",
+    "keyCharacteristics":["Product visual before feature taxonomy.","Meaningful geometry rather than decorative networks.","Restrained containment and clear conversion hierarchy."],
+    "rules":[],
+    "dos":["Do use one consistent sample family across related transformations.","Do connect every line to meaningful endpoints and every research object to a person or question.","Do distinguish the interactive prototype from future product direction."],
+    "donts":["Don't use fake app chrome, floating cards, decorative connectors, or unsupported product claims."]
+  }
+}
