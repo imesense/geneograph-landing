@@ -3,14 +3,3 @@
 # System cache
 .DS_Store
 Thumbs.db
-
-# Build results
-/dist
-
-# Test results
-/test-results
-
-# NPM cache
-/.npm
-/node_modules
-npm-debug.log*

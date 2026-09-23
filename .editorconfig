@@ -63,33 +63,3 @@ end_of_line = crlf
 indent_size = 4
 indent_style = space
 insert_final_newline = true
-
-# Node.js and NVM configs
-[.{node-version,nvmrc}]
-charset = utf-8
-end_of_line = lf
-insert_final_newline = true
-
-# NPM configs
-[.npmrc]
-charset = utf-8
-end_of_line = lf
-indent_size = 4
-indent_style = space
-insert_final_newline = true
-
-# NPM manifests
-[package*.json]
-charset = utf-8
-end_of_line = lf
-indent_size = 2
-indent_style = space
-insert_final_newline = true
-
-# Vite configs
-[vite.config.js]
-charset = utf-8
-end_of_line = lf
-indent_size = 4
-indent_style = space
-insert_final_newline = true

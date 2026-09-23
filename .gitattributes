@@ -33,16 +33,3 @@
 
 # EditorConfig files
 .editorconfig text eol=crlf encoding=utf-8
-
-# Node.js and NVM configs
-.node-version text eol=lf encoding=utf-8
-.nvmrc text eol=lf encoding=utf-8
-
-# NPM configs
-.npmrc text eol=lf encoding=utf-8
-
-# NPM manifests
-package*.json text eol=lf encoding=utf-8
-
-# Vite configs
-vite.config.js text eol=lf encoding=utf-8
