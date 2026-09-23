@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b100e">
-  <meta name="description" content="GeneoGraph brings genealogy data into a flexible visual workspace. Create family charts, research diagrams and visual stories from connected people, photos and notes.">
-  <title>GeneoGraph — Visualize your family history your way</title>
+  <meta name="description" content="GeneoGraph brings your family tree, people, photographs, documents, notes, places and visual research into one connected genealogy workspace.">
+  <title>GeneoGraph — One connected genealogy research workspace</title>
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,125 +14,103 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <!-- One fictional sample family is used in every visual. Paths terminate on named people. -->
+
+  <!-- All illustrations use the same fictional Bennett–Carter sample project. -->
   <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
-    <symbol id="person-arthur" viewBox="0 0 174 78"><rect x="1" y="1" width="172" height="76" rx="10" class="person-frame"/><text x="16" y="30" class="person-name">Arthur Bennett</text><text x="16" y="52" class="person-date">1885–1958</text></symbol>
-    <symbol id="person-rose" viewBox="0 0 174 78"><rect x="1" y="1" width="172" height="76" rx="10" class="person-frame"/><text x="16" y="30" class="person-name">Rose Bennett</text><text x="16" y="52" class="person-date">1888–1967</text></symbol>
-    <symbol id="person-helen" viewBox="0 0 174 78"><rect x="1" y="1" width="172" height="76" rx="10" class="person-frame person-focus"/><text x="16" y="30" class="person-name">Helen Bennett</text><text x="16" y="52" class="person-date">1918–2004</text></symbol>
-    <symbol id="person-samuel" viewBox="0 0 174 78"><rect x="1" y="1" width="172" height="76" rx="10" class="person-frame"/><text x="16" y="30" class="person-name">Samuel Carter</text><text x="16" y="52" class="person-date">1915–1992</text></symbol>
-    <symbol id="person-clara" viewBox="0 0 174 78"><rect x="1" y="1" width="172" height="76" rx="10" class="person-frame person-focus"/><text x="16" y="30" class="person-name">Clara Carter</text><text x="16" y="52" class="person-date">1941–2010</text></symbol>
-    <symbol id="family-work" viewBox="0 0 940 570">
-      <path class="family-line" d="M324 99H390 M357 99V240 M444 279H580 M512 279V450"/>
-      <path class="context-line" d="M210 319L270 279 M599 489H650"/>
-      <use href="#person-arthur" x="150" y="60" width="174" height="78"/><use href="#person-rose" x="390" y="60" width="174" height="78"/>
-      <use href="#person-helen" x="270" y="240" width="174" height="78"/><use href="#person-samuel" x="580" y="240" width="174" height="78"/><use href="#person-clara" x="425" y="450" width="174" height="78"/>
-      <rect x="20" y="250" width="190" height="172" rx="8" class="photo-mat"/><image href="sample-family.webp" x="27" y="257" width="176" height="125" preserveAspectRatio="xMidYMid slice"/><text x="31" y="404" class="photo-caption">Sample portrait · c. 1943</text>
-      <rect x="650" y="448" width="242" height="82" rx="8" class="note-frame"/><text x="666" y="475" class="note-label">NOTE · CLARA CARTER</text><text x="666" y="498" class="note-copy">Born in York, 1941</text>
+    <symbol id="family-tree" viewBox="0 0 650 365">
+      <path class="relation-line" d="M220 67H290 M255 67V149 M330 186H440 M385 186V278"/>
+      <rect class="tree-card" x="70" y="36" width="150" height="62" rx="8"/><text class="tree-name" x="83" y="62">Arthur Bennett</text><text class="tree-date" x="83" y="82">1885–1958</text>
+      <rect class="tree-card" x="290" y="36" width="150" height="62" rx="8"/><text class="tree-name" x="303" y="62">Rose Bennett</text><text class="tree-date" x="303" y="82">1888–1967</text>
+      <rect class="tree-card" x="180" y="149" width="150" height="62" rx="8"/><text class="tree-name" x="193" y="175">Helen Bennett</text><text class="tree-date" x="193" y="195">1918–2004</text>
+      <rect class="tree-card" x="440" y="149" width="150" height="62" rx="8"/><text class="tree-name" x="453" y="175">Samuel Carter</text><text class="tree-date" x="453" y="195">1915–1992</text>
+      <rect class="tree-card tree-selected" x="310" y="278" width="150" height="62" rx="8"/><text class="tree-name" x="323" y="304">Clara Carter</text><text class="tree-date" x="323" y="324">1941–2010</text>
+    </symbol>
+    <symbol id="family-board" viewBox="0 0 900 550">
+      <path class="relation-line" d="M315 85H405 M360 85V180H390V216 M470 253H565 M518 253V406"/>
+      <path class="context-line" d="M220 335L310 253 M598 447H650"/>
+      <rect class="board-person" x="155" y="48" width="160" height="74" rx="9"/><text class="board-name" x="171" y="78">Arthur Bennett</text><text class="board-date" x="171" y="100">1885–1958</text>
+      <rect class="board-person" x="405" y="48" width="160" height="74" rx="9"/><text class="board-name" x="421" y="78">Rose Bennett</text><text class="board-date" x="421" y="100">1888–1967</text>
+      <rect class="board-person board-emphasis" x="310" y="216" width="160" height="74" rx="9"/><text class="board-name" x="326" y="246">Helen Bennett</text><text class="board-date" x="326" y="268">1918–2004</text>
+      <rect class="board-person" x="565" y="216" width="160" height="74" rx="9"/><text class="board-name" x="581" y="246">Samuel Carter</text><text class="board-date" x="581" y="268">1915–1992</text>
+      <rect class="board-person board-emphasis" x="438" y="406" width="160" height="74" rx="9"/><text class="board-name" x="454" y="436">Clara Carter</text><text class="board-date" x="454" y="458">1941–2010</text>
+      <rect class="board-photo-mat" x="25" y="266" width="195" height="159" rx="7"/><image href="sample-family.webp" x="32" y="273" width="181" height="119" preserveAspectRatio="xMidYMid slice"/><text class="board-caption" x="38" y="411">Sample family portrait · 1943</text>
+      <rect class="board-note" x="650" y="408" width="215" height="77" rx="7"/><text class="board-note-label" x="664" y="435">CLARA CARTER · NOTE</text><text class="board-note-copy" x="664" y="461">Born in York, 1941</text>
     </symbol>
   </defs></svg>
 
   <header class="site-header"><div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="GeneoGraph home"><img src="logo.svg" alt="" width="32" height="32"><span>GeneoGraph</span></a>
-    <nav class="nav" aria-label="Main navigation"><a href="#how">How it works</a><a href="#about">About</a><a class="nav-demo" href="https://imesense.github.io/geneograph-prototype/">Try Demo <span aria-hidden="true">↗</span></a></nav>
+    <nav class="site-nav" aria-label="Main navigation"><a href="#workspace">Workspace</a><a href="#geneograph">Geneograph</a><a class="nav-demo" href="https://imesense.github.io/geneograph-prototype/">Try Demo <span aria-hidden="true">↗</span></a></nav>
   </div></header>
 
   <main id="main">
-    <section class="hero" id="top"><div class="wrap">
-      <div class="hero-copy-block">
-        <p class="category">Genealogy visualization &amp; research workspace</p>
-        <h1>Visualize your family history <em>your way.</em></h1>
-        <p class="hero-intro">Turn the people and research you already have into flexible family charts, research diagrams and visual stories—without rebuilding everything in design software.</p>
-        <div class="actions"><a class="button" href="https://imesense.github.io/geneograph-prototype/">Try Demo <span aria-hidden="true">↗</span></a><a class="text-link" href="#how">See how it works <span aria-hidden="true">↓</span></a></div>
-        <p class="meta">No signup <span>·</span> Sample project included <span>·</span> Desktop recommended</p>
+    <section class="hero" id="top"><div class="wrap hero-layout">
+      <div class="hero-copy">
+        <h1>Research gets complicated.<br><span>Your tools shouldn’t.</span></h1>
+        <p>GeneoGraph brings your family tree, people, photos, documents, notes, places and visual research into one connected workspace—so you spend less time managing separate tools and more time understanding your family history.</p>
+        <div class="hero-actions"><a class="button" href="https://imesense.github.io/geneograph-prototype/">Try Demo <span aria-hidden="true">↗</span></a><a class="text-link" href="#workspace">Explore the workspace <span aria-hidden="true">↓</span></a></div>
+        <p class="meta">Interactive prototype <span>·</span> Sample project <span>·</span> Desktop recommended</p>
       </div>
-      <figure class="hero-visual family-figure" tabindex="0" aria-label="Family chart; scroll horizontally on small screens to inspect all people">
-        <div class="figure-top"><div><span class="figure-kicker">Illustrative sample board</span><strong>The Bennett–Carter family</strong></div><span class="figure-aside">3 generations · 5 people</span></div>
-        <svg viewBox="0 0 940 570" role="img" aria-labelledby="hero-chart-title hero-chart-desc"><title id="hero-chart-title">Flexible family visualization</title><desc id="hero-chart-desc">Arthur and Rose Bennett are Helen Bennett’s parents. Helen and Samuel Carter are Clara Carter’s parents. A family photograph is connected to Helen, and a birthplace note is connected to Clara. Selection handles around Helen suggest the layout can be arranged.</desc><use href="#family-work" width="940" height="570"/><rect class="selection-outline" x="265" y="235" width="184" height="88" rx="12"/><g class="selection-handles"><rect x="262" y="232" width="7" height="7"/><rect x="446" y="232" width="7" height="7"/><rect x="262" y="320" width="7" height="7"/><rect x="446" y="320" width="7" height="7"/></g></svg>
-        <figcaption>People, relationships, photographs and notes—arranged together on one canvas. Sample family shown.<span class="mobile-scroll-note"> Scroll sideways to explore the chart.</span></figcaption>
+      <figure class="workspace-figure" aria-label="Illustrative GeneoGraph application view">
+        <div class="app-topline"><span class="app-logo">GeneoGraph</span><div class="module-nav" tabindex="0" aria-label="Project modules shown; scroll sideways on narrow screens"><span class="active">Family Tree</span><span>People</span><span>Geneograph</span><span>Albums</span><span>Archive</span><span>Notes</span><span>Places</span></div></div>
+        <div class="app-projectline"><span>Bennett–Carter research</span><span>Illustrative project view</span></div>
+        <div class="app-view"><div class="app-tree" tabindex="0" aria-label="Family tree; scroll sideways on narrow screens"><div class="app-pane-head"><b>Family Tree</b><span>Classic view · 5 people</span></div><svg viewBox="0 0 650 365" role="img" aria-labelledby="hero-tree-title hero-tree-desc"><title id="hero-tree-title">Bennett–Carter family tree</title><desc id="hero-tree-desc">Arthur and Rose Bennett are Helen’s parents; Helen and Samuel Carter are Clara’s parents. Clara is selected.</desc><use href="#family-tree" width="650" height="365"/></svg></div>
+          <aside class="app-inspector" aria-label="Clara Carter connected information"><div class="inspector-head"><span class="avatar">CC</span><div><strong>Clara Carter</strong><small>1941–2010 · York</small></div></div><p class="inspector-relation">Daughter of Helen Bennett and Samuel Carter</p><div class="inspector-list"><div><span>Album</span><b>Family portrait · 1943</b></div><div><span>Archive</span><b>Clara Carter birth record</b></div><div><span>Notes</span><b>Birthplace research · York</b></div><div><span>Place</span><b>York, England</b></div></div></aside>
+        </div>
+        <figcaption>Family Tree, People and connected research in one project. Illustrative sample content.<span class="mobile-scroll-note"> Scroll the tree sideways to inspect it.</span></figcaption>
       </figure>
     </div></section>
 
-    <section class="section section-template" id="how"><div class="wrap">
-      <div class="section-heading"><h2>Your family doesn’t always fit the template.</h2><p>Standard trees are useful for recording a lineage. A Geneograph gives the same people room for context, photographs and a layout that tells the story more clearly.</p></div>
-      <div class="comparison">
-        <figure class="comparison-side standard-side" tabindex="0" aria-label="Standard family tree; scroll horizontally on small screens"><figcaption><strong>Standard tree</strong><span>The structure decides the view.</span></figcaption>
-          <svg viewBox="0 0 760 450" role="img" aria-labelledby="standard-title standard-desc"><title id="standard-title">Standard Bennett–Carter family tree</title><desc id="standard-desc">Arthur and Rose Bennett are the parents of Helen Bennett. Helen and Samuel Carter are the parents of Clara Carter.</desc>
-            <path class="family-line" d="M277 89H343 M310 89V205 M397 244H483 M440 244V350"/>
-            <use href="#person-arthur" x="103" y="50" width="174" height="78"/><use href="#person-rose" x="343" y="50" width="174" height="78"/>
-            <use href="#person-helen" x="223" y="205" width="174" height="78"/><use href="#person-samuel" x="483" y="205" width="174" height="78"/><use href="#person-clara" x="353" y="350" width="174" height="78"/>
-          </svg>
-        </figure>
-        <span class="comparison-arrow" aria-hidden="true">→</span>
-        <figure class="comparison-side flexible-side" tabindex="0" aria-label="Flexible family board; scroll horizontally on small screens"><figcaption><strong>Flexible Geneograph</strong><span>The same family, with room for its story.</span></figcaption>
-          <svg viewBox="0 0 940 570" role="img" aria-labelledby="flex-title flex-desc"><title id="flex-title">Geneograph of the same Bennett–Carter family</title><desc id="flex-desc">The same five people and relationships appear alongside a family photograph and Clara’s birthplace note.</desc><use href="#family-work" width="940" height="570"/></svg>
-        </figure>
-      </div><p class="under-visual">Same five people. Same relationships. A different way to see them.</p>
+    <section class="section build-section" id="workspace"><div class="wrap">
+      <div class="section-lead"><div><span class="section-word">Build</span><h2>Start with a family tree that stays clear.</h2></div><p>See the family structure at a glance, then open a person for dates, relationships and the research behind their story. More detail doesn’t have to mean a more crowded tree.</p></div>
+      <figure class="build-figure">
+        <div class="build-tree" tabindex="0" aria-label="Family tree; scroll sideways on narrow screens"><div class="fragment-head"><strong>Family Tree</strong><span>Clara Carter selected</span></div><svg viewBox="0 0 650 365" role="img" aria-labelledby="build-tree-title build-tree-desc"><title id="build-tree-title">Bennett–Carter tree</title><desc id="build-tree-desc">Three generations of the same five people, with Clara Carter selected.</desc><use href="#family-tree" width="650" height="365"/></svg></div>
+        <div class="build-profile"><div class="fragment-head"><strong>People</strong><span>Person profile</span></div><div class="profile-heading"><span class="avatar large">CC</span><div><h3>Clara Carter</h3><p>1941–2010 · born in York</p></div></div><dl class="profile-facts"><div><dt>Parents</dt><dd>Helen Bennett · Samuel Carter</dd></div><div><dt>Photographs</dt><dd>Family portrait · 1943</dd></div><div><dt>Archive file</dt><dd>Clara Carter birth record</dd></div><div><dt>Research note</dt><dd>Birthplace research · York</dd></div></dl></div>
+        <figcaption>One family structure; richer information where you need it. Illustrative sample project.<span class="mobile-scroll-note"> Scroll the tree sideways to inspect it.</span></figcaption>
+      </figure>
     </div></section>
 
-    <section class="section section-connected"><div class="wrap connected-layout">
-      <div class="section-heading"><h2>Visual freedom without rebuilding your genealogy.</h2><p>A Geneograph can draw on people and research in your project. Arrange a new view without starting the family history over as disconnected shapes.</p><p class="principle">One record <span aria-hidden="true">→</span> many views</p></div>
-      <div class="source-flow" aria-label="Project records used in a Geneograph board">
-        <div class="source-column"><span class="flow-label">In the project</span><div class="source-row"><b>People</b><span>Helen Bennett · Samuel Carter · Clara Carter</span></div><div class="source-row"><b>Photograph</b><span>Illustrative family portrait · c. 1943</span></div><div class="source-row"><b>Place</b><span>York · Clara’s birthplace</span></div><div class="source-row"><b>Note</b><span>Clara’s 1941 birthplace</span></div></div>
-        <span class="flow-arrow" aria-hidden="true">→</span>
-        <div class="destination"><span class="flow-label">On the Geneograph board</span><strong>The same family, in context</strong><p>Three project people, their photograph and Clara’s York note—in one view.</p>
-          <svg viewBox="0 0 360 270" role="img" aria-labelledby="source-board-title source-board-desc"><title id="source-board-title">Project records on a Geneograph board</title><desc id="source-board-desc">Helen Bennett and Samuel Carter connect to their daughter Clara Carter. The project photograph and a note about Clara’s York birthplace sit beside Clara.</desc>
-            <path class="family-line" d="M150 55H205 M177.5 55V147"/><path class="context-line" d="M96 191L112 174 M242 174H247"/>
-            <rect class="person-frame" x="20" y="28" width="130" height="54" rx="6"/><text class="source-name" x="30" y="59">Helen Bennett</text>
-            <rect class="person-frame" x="205" y="28" width="130" height="54" rx="6"/><text class="source-name" x="215" y="59">Samuel Carter</text>
-            <rect class="person-frame person-focus" x="112" y="147" width="130" height="54" rx="6"/><text class="source-name" x="122" y="178">Clara Carter</text>
-            <rect class="photo-mat" x="18" y="165" width="78" height="90" rx="4"/><image href="sample-family.webp" x="23" y="170" width="68" height="60" preserveAspectRatio="xMidYMid slice"/><text class="source-small" x="25" y="245">PHOTO</text>
-            <rect class="note-frame" x="247" y="154" width="102" height="75" rx="5"/><text class="source-small" x="255" y="178">CLARA’S NOTE</text><text class="source-name" x="255" y="198">York · 1941</text>
-          </svg>
+    <section class="section organize-section"><div class="wrap">
+      <div class="section-lead"><div><span class="section-word">Organize</span><h2>Give every part of your research a proper home.</h2></div><p>Keep records in Archive, photographs in Albums and working thoughts in Notes—without forcing everything into the family tree.</p></div>
+      <div class="organize-system" aria-label="Illustrative GeneoGraph Archive, Albums and Notes views">
+        <div class="organize-nav"><span>Bennett–Carter research</span><div><span>Archive</span><span>Albums</span><span>Notes</span></div><small>One project · distinct spaces</small></div>
+        <div class="organize-views">
+          <article class="archive-view"><div class="fragment-head"><strong>Archive</strong><span>Files &amp; sources</span></div><div class="archive-body"><div class="archive-folders"><b>All files</b><span>Family records</span><span>Birth records</span></div><div class="archive-content"><small>FAMILY RECORDS / BIRTH RECORDS</small><div class="file-row"><span class="file-mark" aria-hidden="true"></span><div><strong>Clara Carter birth record</strong><p>1941 · York · linked to Clara Carter</p></div></div><p class="fragment-note">A document has a home in Archive and stays findable from Clara’s profile.</p></div></div></article>
+          <article class="albums-view"><div class="fragment-head"><strong>Albums</strong><span>Photographs &amp; context</span></div><div class="album-body"><img src="sample-family.webp" alt="Illustrative black-and-white sample family portrait" loading="lazy"><div><small>FAMILY ALBUM</small><strong>Family portrait · 1943</strong><p>Linked to Clara, Helen and Samuel</p></div></div></article>
+          <article class="notes-view"><div class="fragment-head"><strong>Notes</strong><span>Research in progress</span></div><div class="notes-body"><div class="notes-list"><span>Research notes</span><b>Birthplace research · York</b><span>Family memories</span></div><div class="note-editor"><small>LINKED TO CLARA CARTER</small><strong>Birthplace research · York</strong><p>Clara’s birth record places the family in York in 1941. Check the address against the next household register.</p></div></div></article>
         </div>
       </div>
+      <p class="sample-disclaimer">Illustrative content based on the prototype’s actual module structure; not a screenshot.</p>
     </div></section>
 
-    <section class="section section-process"><div class="wrap">
-      <div class="process-heading"><h2>Research it.<br>Arrange it.<br><span>Share it.</span></h2><p>Use the genealogy information you already have. Work through the relationships, add the context that matters, then arrange a family visual someone else can understand.</p></div>
-      <div class="process-pair">
-        <figure class="process-figure working" tabindex="0" aria-label="Working Geneograph; scroll horizontally on small screens"><figcaption><strong>Working Geneograph</strong><span>People, photo and birthplace note together</span></figcaption><svg viewBox="0 0 940 570" role="img" aria-labelledby="work-title work-desc"><title id="work-title">Working Bennett–Carter Geneograph</title><desc id="work-desc">The five members of the Bennett–Carter family are connected, alongside a photograph attached to Helen and a birthplace note attached to Clara.</desc><use href="#family-work" width="940" height="570"/></svg></figure>
-        <span class="process-arrow" aria-hidden="true">→</span>
-        <figure class="process-figure finished" tabindex="0" aria-label="Finished family visual; scroll horizontally on small screens"><figcaption><strong>Finished family visual</strong><span>Same family and content, arranged to present</span></figcaption>
-          <div class="finished-title"><small>A family story · illustrative sample</small><b>The Bennett–Carter line</b></div>
-          <svg viewBox="0 0 940 570" role="img" aria-labelledby="finished-title finished-desc"><title id="finished-title">Presentation view of the Bennett–Carter family</title><desc id="finished-desc">Arthur and Rose Bennett connect to their daughter Helen. Helen and Samuel Carter connect to their daughter Clara. The same family photograph and Clara’s York birthplace note remain with the family.</desc>
-            <path class="family-line" d="M306 110H398 M352 110V224 M439 263H560 M500 263V390"/>
-            <use href="#person-arthur" x="132" y="71" width="174" height="78"/><use href="#person-rose" x="398" y="71" width="174" height="78"/><use href="#person-helen" x="265" y="224" width="174" height="78"/><use href="#person-samuel" x="560" y="224" width="174" height="78"/><use href="#person-clara" x="413" y="390" width="174" height="78"/>
-            <rect x="41" y="333" width="232" height="187" rx="6" class="photo-mat"/><image href="sample-family.webp" x="49" y="341" width="216" height="145" preserveAspectRatio="xMidYMid slice"/><text x="53" y="508" class="photo-caption">Sample portrait · c. 1943</text>
-            <path class="context-line" d="M273 412L413 429 M587 429H665"/><rect x="665" y="396" width="230" height="79" rx="7" class="note-frame"/><text x="680" y="423" class="note-label">CLARA CARTER · YORK</text><text x="680" y="449" class="note-copy">Born in 1941</text>
-          </svg>
-        </figure>
-      </div><p class="under-visual">A working view and a presentation view of the same five people, photograph and birthplace detail.</p>
+    <section class="section connect-section"><div class="wrap connect-layout">
+      <div class="connect-copy"><span class="section-word">Connect</span><h2>Everything stays connected to the people it belongs to.</h2><p>Clara has one place in the family, while the material about her can live where it makes sense. Start at the tree, a file, a photograph or a note and find the context again.</p><p class="principle">One record <span aria-hidden="true">→</span> many views</p></div>
+      <figure class="record-ledger"><figcaption><span class="avatar">CC</span><div><strong>Clara Carter</strong><small>Person record · 1941–2010</small></div></figcaption><div class="ledger-head"><span>Research material</span><span>Where it lives</span></div><div class="ledger-row"><strong>Helen Bennett + Samuel Carter</strong><span>Family Tree · relationships</span></div><div class="ledger-row"><strong>Family portrait · 1943</strong><span>Albums · linked photograph</span></div><div class="ledger-row"><strong>Clara Carter birth record</strong><span>Archive · file &amp; source</span></div><div class="ledger-row"><strong>Birthplace research · York</strong><span>Notes · working interpretation</span></div><div class="ledger-row"><strong>York, England</strong><span>Places · birthplace</span></div><div class="ledger-row"><strong>Bennett–Carter line</strong><span>Geneograph · visual view</span></div><p class="ledger-foot">Different homes for different material. The person remains the thread between them.</p></figure>
     </div></section>
 
-    <section class="section section-uses"><div class="wrap">
-      <div class="section-heading compact"><h2>One family history. Many ways to show it.</h2><p>Shape the view around the story or research question, not a fixed chart template.</p></div>
-      <div class="use-list">
-        <article class="use-item"><div class="use-art story-art" aria-hidden="true"><img src="sample-family.webp" alt="" loading="lazy"><span>Arthur + Rose<br>Helen + Samuel<br>Clara</span></div><div><h3>Family story</h3><p>A branch with the photographs and dates that give it a human face.</p></div></article>
-        <article class="use-item"><div class="use-art chart-art" aria-hidden="true"><span>Arthur · Rose</span><i></i><span>Helen · Samuel</span><i></i><span>Clara · York</span></div><div><h3>Research chart</h3><p>A complicated structure made legible with useful context beside the people.</p></div></article>
-        <article class="use-item"><div class="use-art present-art" aria-hidden="true"><small>The Bennett–Carter line</small><span>1885 — 1941</span><b>Five lives, three generations</b></div><div><h3>Presentation</h3><p>A clear visual starting point for relatives, articles or genealogy talks.</p></div></article>
+    <section class="section visualize-section" id="geneograph"><div class="wrap">
+      <div class="section-lead"><div><span class="section-word">Visualize</span><h2>When the tree isn’t enough, arrange it your way.</h2></div><p>Geneograph is the flexible board inside the same project. Reuse linked people and photos to present a family story, or keep a possible relationship visible while you investigate it.</p></div>
+      <div class="geneograph-preview"><div class="geneograph-top"><span>Geneograph <b>· Bennett–Carter research</b></span><small>Illustrative sample board</small></div>
+        <div class="geneograph-pair">
+          <figure class="present-view" tabindex="0" aria-label="Present family visual; scroll sideways on narrow screens"><figcaption><strong>Present</strong><span>A family visual with people, photograph and context</span></figcaption><svg viewBox="0 0 900 550" role="img" aria-labelledby="present-title present-desc"><title id="present-title">Bennett–Carter Geneograph</title><desc id="present-desc">The same five linked family people are arranged across three generations. A sample portrait belongs to Helen’s branch and Clara’s York note connects to her card.</desc><use href="#family-board" width="900" height="550"/></svg></figure>
+          <figure class="investigate-view"><figcaption><strong>Investigate</strong><span>One possible relationship, with its question attached</span></figcaption><div class="investigate-diagram" tabindex="0" aria-label="Possible father diagram; scroll sideways on narrow screens"><svg viewBox="0 0 510 360" role="img" aria-labelledby="investigate-title investigate-desc"><title id="investigate-title">Samuel Carter parentage question</title><desc id="investigate-desc">Edith Carter is Samuel’s confirmed mother, connected by a solid line. Walter Carter is a possible father, connected by a dashed line. A birth register and research note support the open question.</desc>
+            <path class="relation-line" d="M135 112L220 222"/><path class="possible-line" d="M382 112L288 222"/>
+            <rect class="board-person" x="42" y="54" width="142" height="58" rx="7"/><text class="research-name" x="54" y="79">Edith Carter</text><text class="research-date" x="54" y="98">Confirmed mother</text>
+            <rect class="possible-person" x="326" y="54" width="142" height="58" rx="7"/><text class="research-name" x="338" y="79">Walter Carter</text><text class="research-date" x="338" y="98">Possible father</text>
+            <rect class="board-person board-emphasis" x="184" y="222" width="142" height="63" rx="7"/><text class="research-name" x="196" y="249">Samuel Carter</text><text class="research-date" x="196" y="269">1915–1992</text>
+            <text class="relation-label" x="51" y="177">CONFIRMED</text><text class="possible-label" x="356" y="177">POSSIBLE</text>
+          </svg></div><div class="question-context"><div><small>EVIDENCE · 1915 BIRTH REGISTER</small><p>Father’s name may read “Walter”; transcription needs checking.</p></div><div><small>RESEARCH NOTE</small><p>Compare Walter’s 1911 address before accepting the link.</p></div></div></figure>
+        </div>
       </div>
+      <p class="visualize-note">Linked project people and photos can be reused on a board. A board-local hypothesis is kept visibly separate from a confirmed Family Tree relationship.</p>
     </div></section>
 
-    <section class="section section-uncertain"><div class="wrap uncertain-grid">
-      <div class="section-heading"><h2>And not every branch is certain.</h2><p>Genealogy research often sits somewhere between “I know” and “I think.” Keep a possible relationship visible alongside the record and note that make it worth investigating.</p><p class="statement">Your tree records conclusions.<br><span>Geneograph gives you somewhere to think.</span></p></div>
-      <figure class="question-figure"><figcaption><strong>Who was Samuel Carter’s father?</strong><span>One question · confirmed and possible relationships</span></figcaption>
-        <div class="question-diagram" tabindex="0" aria-label="Parentage diagram; scroll horizontally on small screens"><svg viewBox="0 0 760 420" role="img" aria-labelledby="question-title question-desc"><title id="question-title">Samuel Carter parentage question</title><desc id="question-desc">Edith Carter is Samuel Carter’s confirmed mother, connected by a solid line. Walter Carter is a possible father, connected by a dashed line. A 1915 birth register and a research note support the open question.</desc>
-          <path class="family-line" d="M222 124L330 248"/><path class="possible-line" d="M538 124L430 248"/>
-          <rect x="58" y="48" width="190" height="76" rx="9" class="person-frame"/><text x="75" y="79" class="person-name">Edith Carter</text><text x="75" y="101" class="person-date">1889–1964 · mother</text>
-          <rect x="512" y="48" width="190" height="76" rx="9" class="possible-frame"/><text x="529" y="79" class="person-name">Walter Carter</text><text x="529" y="101" class="person-date">1887–1955 · possible father</text>
-          <rect x="293" y="248" width="174" height="78" rx="9" class="person-frame person-focus"/><text x="309" y="279" class="person-name">Samuel Carter</text><text x="309" y="301" class="person-date">1915–1992</text>
-          <text x="117" y="207" class="relation-confirmed">CONFIRMED MOTHER</text><text x="503" y="207" class="relation-possible">POSSIBLE FATHER</text>
-        </svg></div>
-        <div class="evidence"><div><small>Evidence for the open question</small><strong>Birth register · 1915</strong><p>Father’s name may read “Walter”; transcription needs checking.</p></div><div><small>Research note</small><strong>Compare the address</strong><p>Check Walter’s 1911 household before accepting this link.</p></div></div>
-      </figure>
-    </div></section>
-
-    <section class="section section-about" id="about"><div class="wrap about-layout"><h2>For the people doing the research.</h2><div class="audience-list"><div><h3>Family researchers</h3><p>Whose trees, scans, notes and photos have outgrown a basic view.</p></div><div><h3>Genealogists working complex cases</h3><p>Who need to understand difficult structures and competing possibilities.</p></div><div><h3>Family archivists and storytellers</h3><p>Who want to turn research into clear visual material.</p></div></div></div></section>
+    <section class="section summary-section"><div class="wrap"><h2>One workspace for the whole research process.</h2><div class="outcome-list"><div><span>Build</span><strong>Family Tree + People</strong><p>Keep the family structure clear.</p></div><div><span>Organize</span><strong>Archive + Albums + Notes</strong><p>Give every part of the research a home.</p></div><div><span>Connect</span><strong>People + Places + Evidence</strong><p>Keep context attached to what it belongs to.</p></div><div><span>Visualize</span><strong>Geneograph</strong><p>See and present the family your way.</p></div></div></div></section>
     <section class="ownership"><div class="wrap ownership-inner"><h2>Your family history should remain yours.</h2><p>GeneoGraph’s direction is local projects and portable data, with optional online services later—not a requirement to hand over your research.</p></div></section>
-    <section class="section section-demo" id="demo"><div class="wrap demo-layout"><div><h2>Make your own Geneograph.</h2><p>Open a prepared family project, rearrange the visualization, explore connected research and experience Geneograph yourself.</p><a class="button" href="https://imesense.github.io/geneograph-prototype/">Open the Demo <span aria-hidden="true">↗</span></a><p class="meta">No signup <span>·</span> Sample project <span>·</span> Desktop recommended</p></div><ol class="demo-steps"><li>Arrange the family</li><li>Add context</li><li>Explore a difficult branch</li></ol></div></section>
-    <section class="section research-group" id="research-group"><div class="wrap research-layout"><div><h2>Help shape what GeneoGraph becomes.</h2><p>GeneoGraph is still in development. If you research family history and want to help refine the workspace, get in touch.</p></div><div class="contact-action"><a class="text-link" href="mailto:geneograph@gmail.com?subject=GeneoGraph%20Research%20Group&amp;body=Hello%20GeneoGraph%2C%0A%0AI%27m%20interested%20in%20the%20Research%20Group.%0A%0A">Email about the Research Group <span aria-hidden="true">↗</span></a><p>Opens your email app; nothing is submitted on this site.</p></div></div></section>
+    <section class="section demo-section" id="demo"><div class="wrap demo-layout"><div><h2>See the whole research workspace in action.</h2><p>Open the prepared prototype project and follow the research from family structure to connected material and a custom Geneograph view.</p><a class="button" href="https://imesense.github.io/geneograph-prototype/">Open the Demo <span aria-hidden="true">↗</span></a><p class="meta">No signup <span>·</span> Sample project <span>·</span> Desktop recommended</p></div><ol class="demo-journey"><li>Navigate the family</li><li>Open a person</li><li>Explore photos, files and notes</li><li>Open Geneograph</li></ol></div></section>
+    <section class="section research-group" id="research-group"><div class="wrap research-layout"><div><h2>Help shape GeneoGraph.</h2><p>GeneoGraph is still in development. If you research family history and want to help refine the workspace, get in touch.</p></div><div class="contact-action"><a class="text-link" href="mailto:geneograph@gmail.com?subject=GeneoGraph%20Research%20Group&amp;body=Hello%20GeneoGraph%2C%0A%0AI%27m%20interested%20in%20the%20Research%20Group.%0A%0A">Email about the Research Group <span aria-hidden="true">↗</span></a><p>Opens your email app; nothing is submitted on this site.</p></div></div></section>
     <section class="origin"><div class="wrap origin-inner"><h2>Built from real genealogy research.</h2><p>GeneoGraph grew from hands-on family-history work and the challenge of keeping people, records, notes and unresolved questions connected.</p></div></section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><div><a class="brand" href="#top"><img src="logo.svg" alt="" width="28" height="28"><span>GeneoGraph</span></a><p>Interactive prototype · Currently in development</p></div><nav aria-label="Footer navigation"><a href="#how">How it works</a><a href="https://imesense.github.io/geneograph-prototype/">Demo</a><a href="#research-group">Research Group</a><a href="#about">About</a></nav></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><div><a class="brand" href="#top"><img src="logo.svg" alt="" width="28" height="28"><span>GeneoGraph</span></a><p>Interactive prototype · Currently in development</p></div><nav aria-label="Footer navigation"><a href="#workspace">Workspace</a><a href="#geneograph">Geneograph</a><a href="https://imesense.github.io/geneograph-prototype/">Demo</a><a href="#research-group">Research Group</a></nav></div></footer>
 </body>
 </html>

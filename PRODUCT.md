@@ -12,11 +12,11 @@ Primary early users are serious amateur genealogists and advanced hobbyists orga
 
 ## Product Purpose
 
-GeneoGraph is early-stage genealogy research and visualization software. It helps researchers connect people, documents, photographs, places, notes and evidence, then understand and present family relationships visually. The landing page's primary conversion is an open of the interactive prototype.
+GeneoGraph is an early-stage genealogy research workspace. It brings a family tree, people profiles, photographs, files, sources, notes, places and visual research into one connected project. The landing page's primary conversion is an open of the interactive prototype.
 
 ## Positioning
 
-GeneoGraph combines genealogy-native structured data with the visual freedom of a flexible canvas. It is a research workspace, not another large online record database and not a generic drawing tool.
+Different parts of genealogy research have proper homes but behave like one connected project. GeneoGraph is broader than a family-tree editor or a diagram tool: researchers can build the family structure, organize research material, reconnect it through people and places, then visualize it with Geneograph. It is not another large online record database.
 
 ## Operating Context
 
@@ -28,7 +28,8 @@ Researchers often work across a family tree, scans, photographs, notes, spreadsh
 - The interactive application is a prototype, not a finished production product. The landing should not present planned capabilities as shipped.
 - The landing is a static site hosted through GitHub Pages. Its demo CTA currently points to `https://imesense.github.io/geneograph-prototype/`.
 - Local-first projects, portable data and optional future online services are product direction, not a claim of completed functionality.
-- Hypothesis and uncertainty support differentiates advanced research; visualization is the primary acquisition message.
+- Family Tree and People, Archive and Albums and Notes, connected records, and Geneograph are the four primary landing outcomes: Build, Organize, Connect, Visualize.
+- Geneograph supports flexible presentation and advanced investigation. Hypothesis work is a differentiator, not the main acquisition message.
 
 ## Brand Commitments
 
@@ -40,9 +41,9 @@ The separate GeneoGraph prototype is available read-only at `E:\Geneograph\Conce
 
 ## Product Principles
 
-1. Show a useful family visual before describing advanced research features.
-2. Keep visual work connected to genealogy information.
-3. Make uncertainty explicit without presenting hypotheses as conclusions.
+1. Show the whole genealogy workspace before zooming into individual modules.
+2. Give different research material dedicated places while keeping it connected to people and places.
+3. Reuse linked genealogy information in visual work, with hypotheses visibly distinct from conclusions.
 4. Distinguish current prototype behavior from product direction.
 
 ## Accessibility & Inclusion

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-23T17:14:10Z",
+  "generatedAt": "2026-09-23T19:00:00Z",
   "title": "Design System: GeneoGraph landing",
   "extensions": {
     "colorMeta": {
@@ -14,7 +14,7 @@
     },
     "shadows": [{"name":"action-offset","value":"0 9px 25px rgba(4, 23, 12, .28)","purpose":"Primary CTA only."}],
     "motion": [{"name":"state","value":"background .2s ease, transform .2s ease","purpose":"Restrained button feedback."}],
-    "breakpoints": [{"name":"tablet","value":"1050px"},{"name":"mobile","value":"760px"},{"name":"small-mobile","value":"480px"}]
+    "breakpoints": [{"name":"tablet","value":"1120px"},{"name":"mobile","value":"760px"},{"name":"small-mobile","value":"480px"}]
   },
   "components": [
     {
@@ -34,11 +34,11 @@
     }
   ],
   "narrative": {
-    "northStar":"Genealogy data with the freedom of a visual canvas.",
-    "overview":"The page feels like a calm, capable research workspace whose family visualization is the principal artifact. It demonstrates relationships and context at useful scale, then lets quieter typography explain the value. The established charcoal and green identity remains intact.",
-    "keyCharacteristics":["Product visual before feature taxonomy.","Meaningful geometry rather than decorative networks.","Restrained containment and clear conversion hierarchy."],
+    "northStar":"Different research spaces, one connected project.",
+    "overview":"The page feels like a calm, capable genealogy workspace. Its first product view demonstrates Family Tree and connected person information together; later sections give Archive, Albums, Notes and Geneograph distinct space. The established charcoal and green identity remains intact.",
+    "keyCharacteristics":["Whole-application proof before individual module detail.","Meaningful geometry rather than decorative networks.","Distinct module views inside a connected visual system.","Restrained containment and clear conversion hierarchy."],
     "rules":[],
-    "dos":["Do use one consistent sample family across related transformations.","Do connect every line to meaningful endpoints and every research object to a person or question.","Do distinguish the interactive prototype from future product direction."],
-    "donts":["Don't use fake app chrome, floating cards, decorative connectors, or unsupported product claims."]
+    "dos":["Do use one consistent sample project across all module views.","Do connect every line to meaningful endpoints and every research object to a person or question.","Do distinguish the interactive prototype from future product direction."],
+    "donts":["Don't let Geneograph stand in for the whole product.","Don't use floating cards, decorative connectors, or unsupported product claims."]
   }
 }
