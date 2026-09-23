@@ -37,7 +37,7 @@ Retain the charcoal/near-black and GeneoGraph green identity, modern sans-serif 
 
 ## Evidence on Hand
 
-The separate GeneoGraph prototype is available read-only at `E:\Geneograph\Concept\geneograph-prototype`. The landing uses a clearly illustrative, fictional sample family and generated period-style portrait; it does not imply a historical record or customer work.
+The separate GeneoGraph prototype is available read-only at `E:\Geneograph\Concept\geneograph-prototype`. The landing uses optimized captures of the public prototype's Whiskerfield sample project. Silver Whiskerfield, Luna Purrington, their Meowbridge marriage record, photograph and note are recurring example records. These are prototype sample data, not historical records or customer work. The prior Bennett–Carter illustrative landing is retained in the non-deployed `design-backups/bennett-carter/` directory.
 
 ## Product Principles
 
