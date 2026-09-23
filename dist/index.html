@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b100e">
+<title>GeneoGraph — Genealogy research beyond the family tree</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<meta name="description" content="Keep people, documents, notes, sources and research hypotheses connected—and investigate uncertain branches without treating every idea as fact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#f4f7f5;--soft:#a5b0aa;--muted:#77847d;--bg:#0b100e;--bg2:#0f1513;--raised:#161e1b;--green:#5ed08a;--green2:#48b976;--green-dark:#153322;--amber:#d79a54;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);--ease:cubic-bezier(.16,1,.3,1)}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}::selection{background:var(--green);color:#07100b}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.skip{position:fixed;z-index:100;left:16px;top:12px;padding:10px 14px;background:var(--ink);color:var(--bg);transform:translateY(-160%)}.skip:focus{transform:none}.site-head{height:76px;display:flex;align-items:center;border-bottom:1px solid var(--line);position:relative;z-index:10}.nav{display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em}.brand img{width:34px;height:34px}.nav-links{display:flex;align-items:center;gap:28px;color:var(--soft);font-size:14px;font-weight:600}.nav-links a:hover{color:var(--ink)}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 21px;border-radius:9px;background:var(--green);color:#07130c;font-weight:800;border:1px solid transparent;cursor:pointer;transition:background .2s,transform .2s var(--ease)}.button:hover{background:var(--green2);transform:translateY(-1px)}.button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(94,208,138,.42);outline-offset:4px}.nav-cta{min-height:42px;padding-inline:17px}.hero{padding:82px 0 96px;position:relative}.hero::before{content:"";position:absolute;inset:0 0 auto;height:520px;pointer-events:none;background:linear-gradient(90deg,rgba(94,208,138,.035),transparent 42%)}.hero-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:56px;align-items:center}.category{margin:0 0 24px;color:var(--green);font-size:12px;font-weight:800;letter-spacing:.13em}.hero h1{font-size:clamp(45px,5.1vw,67px);line-height:1.04;letter-spacing:-.04em;margin:0;max-width:780px;text-wrap:balance}.hero-copy{font-size:18px;line-height:1.72;color:var(--soft);max-width:620px;margin:26px 0 30px}.actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.text-link{color:var(--soft);font-weight:700;font-size:14px}.text-link:hover{color:var(--ink)}.meta{margin:16px 0 0;color:var(--muted);font-size:13px}.product-window{position:relative;background:#0d1411;border:1px solid var(--line2);border-radius:14px;overflow:hidden;min-height:590px;box-shadow:0 30px 80px rgba(0,0,0,.38)}.window-top{height:50px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:#111815}.window-brand{font-size:12px;font-weight:800}.window-tools{display:flex;gap:7px}.window-tools i{display:block;width:7px;height:7px;border-radius:50%;background:var(--muted)}.board{position:relative;height:540px;background-color:#0d1411;background-image:radial-gradient(rgba(165,176,170,.13) 1px,transparent 1px);background-size:22px 22px;overflow:hidden}.board .line{position:absolute;height:2px;background:#7c9588;transform-origin:left center;z-index:1}.board .line.dashed{height:0;border-top:2px dashed var(--amber);background:none}.ln1{width:168px;left:159px;top:180px;transform:rotate(10deg)}.ln2{width:190px;left:356px;top:230px;transform:rotate(17deg)}.ln3{width:164px;left:181px;top:400px;transform:rotate(-11deg)}.ln4{width:150px;left:335px;top:384px;transform:rotate(-7deg)}.node{position:absolute;z-index:2;width:176px;background:var(--raised);border:1px solid var(--line2);border-radius:9px;padding:13px}.node small,.object small{display:block;color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}.node strong,.object strong{display:block;font-size:13px;line-height:1.3}.node p,.object p{font-size:10px;color:var(--soft);margin:5px 0 0}.node.confirm{border-color:rgba(94,208,138,.55)}.node.possible{border-color:rgba(215,154,84,.65)}.n1{left:40px;top:113px}.n2{right:32px;top:244px}.n3{left:53px;bottom:63px}.object{position:absolute;z-index:2;width:150px;padding:13px;background:#1b211f;border:1px solid var(--line2);border-radius:8px}.doc{right:68px;top:78px}.note{right:75px;bottom:58px;background:#251f17;border-color:rgba(215,154,84,.33)}.legend{position:absolute;z-index:4;left:16px;bottom:14px;right:16px;display:flex;gap:16px;padding:10px 12px;background:rgba(11,16,14,.88);border:1px solid var(--line);border-radius:8px;backdrop-filter:blur(8px)}.legend span{font-size:10px;color:var(--soft);display:flex;align-items:center;gap:7px}.legend i{display:inline-block;width:22px;border-top:2px solid var(--green)}.legend i.dash{border-top-style:dashed;border-color:var(--amber)}.caption{position:absolute;right:18px;top:66px;z-index:3;color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase;writing-mode:vertical-rl}.section{padding:112px 0;border-top:1px solid var(--line)}.section h2{font-size:clamp(36px,4vw,50px);line-height:1.08;letter-spacing:-.035em;margin:0;text-wrap:balance}.lead{font-size:18px;color:var(--soft);max-width:680px;margin:22px 0 0}.fragment{background:var(--bg2)}.fragment-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:90px;align-items:center}.scatter{position:relative;min-height:450px}.scrap{position:absolute;padding:13px 16px;border-bottom:1px solid var(--line2);color:var(--soft);font-size:14px;background:linear-gradient(90deg,rgba(255,255,255,.04),transparent);width:200px}.scrap b{color:var(--ink);font-size:12px;display:block;margin-bottom:3px}.s1{top:30px;left:0;transform:rotate(-2deg)}.s2{top:94px;right:0;transform:rotate(2deg)}.s3{top:165px;left:30px}.s4{top:236px;right:28px;transform:rotate(-1deg)}.s5{top:312px;left:8px;transform:rotate(1deg)}.merge{position:absolute;right:40%;top:155px;height:160px;border-left:1px solid rgba(94,208,138,.38)}.merge::after{content:"";position:absolute;bottom:-8px;left:-4px;width:7px;height:7px;border-radius:50%;background:var(--green)}.result{position:absolute;right:0;bottom:6px;width:285px;padding:18px;background:var(--raised);border:1px solid rgba(94,208,138,.35);border-radius:10px}.result small{color:var(--green);font-size:10px;font-weight:800}.result strong{display:block;margin-top:7px}.result p{margin:7px 0 0;font-size:12px;color:var(--soft)}.uncertainty{padding-bottom:128px}.statement{font-size:clamp(30px,4.2vw,58px);line-height:1.12;letter-spacing:-.035em;max-width:860px;margin:36px 0 52px}.statement span{color:var(--green)}.research-map{display:grid;grid-template-columns:180px 1fr;gap:18px;min-height:570px}.key{border-right:1px solid var(--line);padding-right:18px}.key div{padding:16px 0;border-bottom:1px solid var(--line)}.key strong{display:block;font-size:11px;letter-spacing:.08em}.key p{margin:5px 0 0;font-size:12px;color:var(--muted)}.canvas{position:relative;min-height:570px;border:1px solid var(--line);border-radius:12px;background-color:#0d1411;background-image:radial-gradient(rgba(165,176,170,.1) 1px,transparent 1px);background-size:24px 24px;overflow:hidden}.canvas svg{position:absolute;inset:0;width:100%;height:100%}.canvas .node{width:190px}.c1{left:8%;top:12%}.c2{right:11%;top:15%}.c3{left:38%;top:42%}.c4{left:13%;bottom:10%}.c5{right:8%;bottom:8%}.tag{display:inline-block;margin-top:9px;font-size:9px;font-weight:800;letter-spacing:.07em;color:var(--green)}.tag.amber{color:var(--amber)}.connected{background:var(--bg2)}.connected-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:74px;align-items:center}.orbit{position:relative;min-height:520px}.person-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:220px;padding:20px;background:var(--green-dark);border:1px solid rgba(94,208,138,.42);border-radius:12px;z-index:2}.person-core .avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#08100b;font-weight:900;margin-bottom:14px}.person-core h3{margin:0;font-size:18px}.person-core p{margin:5px 0 0;color:var(--soft);font-size:12px}.orbit-item{position:absolute;width:150px;padding:13px;border-bottom:1px solid var(--line2);background:var(--raised);font-size:12px}.orbit-item b{display:block;color:var(--ink)}.orbit-item span{color:var(--muted);font-size:10px}.o1{left:2%;top:10%}.o2{right:0;top:15%}.o3{left:0;bottom:12%}.o4{right:2%;bottom:8%}.o5{right:1%;top:48%}.orbit svg{position:absolute;inset:0;width:100%;height:100%}.output{padding-bottom:0}.output-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:54px}.output-head .lead{max-width:520px}.transformation{background:var(--raised);border-block:1px solid var(--line);display:grid;grid-template-columns:1.12fr 54px .88fr;min-height:530px}.work-side,.finish-side{padding:42px;position:relative;overflow:hidden}.work-side{background-color:#0e1512;background-image:radial-gradient(rgba(165,176,170,.12) 1px,transparent 1px);background-size:22px 22px}.transform-arrow{display:grid;place-items:center;color:var(--green);font-size:28px;border-inline:1px solid var(--line)}.side-label{font-size:10px;font-weight:800;letter-spacing:.11em;color:var(--muted);position:relative;z-index:3}.mini-family{position:relative;height:400px}.mini-card{position:absolute;width:140px;padding:12px;background:#18211e;border:1px solid var(--line2);border-radius:8px;font-size:11px}.mini-card b{display:block}.mini-card span{color:var(--muted);font-size:9px}.m1{left:4%;top:18%}.m2{right:6%;top:34%}.m3{left:29%;bottom:12%}.finish-side{background:#e7e3d8;color:#152019}.finish-side .side-label{color:#56635c}.family-visual{margin-top:35px;border-top:1px solid rgba(15,30,22,.25);padding-top:35px}.family-visual h3{font-family:Georgia,serif;font-size:31px;font-weight:400;margin:0 0 30px}.portrait-row{display:flex;gap:14px;align-items:flex-start}.portrait{flex:1;min-width:0}.portrait-image{aspect-ratio:4/5;background:linear-gradient(135deg,#718376,#b6b2a3);filter:grayscale(1);margin-bottom:9px}.portrait:nth-child(2) .portrait-image{background:linear-gradient(45deg,#505a55,#c3b6a2)}.portrait:nth-child(3) .portrait-image{background:linear-gradient(160deg,#777,#d3cbb7)}.portrait b{font-family:Georgia,serif;font-size:13px}.portrait span{display:block;font-size:9px;color:#58625d}.compact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:88px;align-items:start}.audiences{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px;border-top:1px solid var(--line)}.audience{padding:28px 28px 0 0}.audience+.audience{border-left:1px solid var(--line);padding-left:28px}.audience h3{font-size:12px;letter-spacing:.08em;margin:0 0 12px}.audience p{color:var(--soft);font-size:15px;margin:0}.ownership{margin-top:96px;padding:50px 0;border-block:1px solid var(--line);display:grid;grid-template-columns:1fr 1.5fr;gap:80px}.direction-list{display:grid;gap:18px}.direction-list div{display:grid;grid-template-columns:130px 1fr;gap:24px;padding-bottom:18px;border-bottom:1px solid var(--line)}.direction-list b{font-size:13px}.direction-list span{color:var(--soft);font-size:14px}.demo{background:var(--green-dark);position:relative;overflow:hidden}.demo::after{content:"";position:absolute;right:-10%;top:-25%;width:52%;height:150%;border:1px solid rgba(94,208,138,.12);transform:rotate(18deg)}.demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:88px;position:relative;z-index:1}.demo h2{max-width:520px}.demo-list{counter-reset:steps;margin:0;padding:0;list-style:none}.demo-list li{counter-increment:steps;padding:17px 0 17px 50px;border-bottom:1px solid rgba(255,255,255,.1);position:relative}.demo-list li::before{content:counter(steps);position:absolute;left:0;top:16px;width:28px;height:28px;border:1px solid rgba(94,208,138,.4);display:grid;place-items:center;border-radius:50%;font-size:11px;color:var(--green)}.demo .actions{margin-top:30px}.research-group{display:grid;grid-template-columns:1fr .8fr;gap:90px;align-items:center}.signup label{display:block;font-size:13px;font-weight:700;margin-bottom:10px}.field-row{display:flex}.field-row input{min-width:0;flex:1;height:52px;padding:0 16px;background:var(--raised);border:1px solid var(--line2);border-radius:9px 0 0 9px;color:var(--ink)}.field-row button{border-radius:0 9px 9px 0}.form-note{font-size:12px;color:var(--muted);margin-top:10px}.form-status{color:var(--green);font-size:13px;min-height:21px;margin-top:10px}.origin{padding:78px 0;background:var(--bg2);border-top:1px solid var(--line)}.origin .wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:90px}.origin h2{font-size:28px;margin:0;letter-spacing:-.025em}.origin p{margin:0;color:var(--soft);font-size:17px;max-width:720px}.foot{padding:34px 0;border-top:1px solid var(--line)}.foot-row{display:flex;align-items:center;justify-content:space-between;gap:30px}.foot-links{display:flex;gap:22px;color:var(--soft);font-size:13px}.quiet{font-size:12px;color:var(--muted)}
+@media(max-width:980px){.hero-grid,.fragment-grid,.connected-grid,.demo-grid,.research-group{grid-template-columns:1fr}.hero-grid{gap:52px}.hero{padding-top:62px}.product-window{min-height:550px}.fragment-grid,.connected-grid,.demo-grid{gap:55px}.scatter{min-height:420px}.output-head{display:block}.output-head .lead{max-width:720px}.research-map{grid-template-columns:1fr}.key{border-right:0;display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line);padding:0}.key div{padding:12px 8px}.compact-grid{grid-template-columns:1fr}.ownership{grid-template-columns:1fr;gap:34px}.research-group{gap:38px}.origin .wrap{grid-template-columns:1fr;gap:18px}}@media(max-width:680px){.wrap{width:min(100% - 30px,1180px)}.site-head{height:66px}.nav-links a:not(.nav-cta){display:none}.hero{padding:52px 0 72px}.hero h1{font-size:43px}.hero-copy{font-size:16px}.product-window{min-height:485px}.board{height:435px}.node{width:142px;padding:10px}.node strong{font-size:11px}.node p{display:none}.n1{left:17px;top:76px}.n2{right:16px;top:200px}.n3{left:26px;bottom:49px}.object{width:120px;padding:10px}.doc{right:22px;top:44px}.note{right:22px;bottom:50px}.ln1{left:131px;top:132px;width:110px}.ln2{left:235px;top:205px;width:100px}.ln3{left:145px;top:336px;width:90px}.ln4{left:229px;top:328px;width:90px}.legend{gap:8px;flex-wrap:wrap}.section{padding:80px 0}.fragment-grid{gap:34px}.scatter{min-height:460px}.scrap{width:165px}.result{width:230px}.statement{margin-bottom:34px}.research-map{display:block}.key{display:flex;overflow-x:auto}.key div{min-width:150px}.canvas{min-height:500px}.canvas .node{width:150px}.c1{left:4%;top:8%}.c2{right:4%;top:26%}.c3{left:16%;top:46%}.c4{left:5%;bottom:7%}.c5{right:4%;bottom:9%}.orbit{min-height:590px}.o1{left:0}.o2{right:0}.o3{left:0}.o4{right:0}.o5{right:0;top:64%}.transformation{grid-template-columns:1fr}.transform-arrow{height:54px;border-inline:0;border-block:1px solid var(--line);transform:rotate(90deg)}.work-side,.finish-side{padding:28px 20px}.audiences{grid-template-columns:1fr}.audience{padding:22px 0}.audience+.audience{border-left:0;border-top:1px solid var(--line);padding-left:0}.ownership{margin-top:64px}.direction-list div{grid-template-columns:1fr;gap:6px}.field-row{display:grid;gap:10px}.field-row input,.field-row button{border-radius:9px}.origin{padding:60px 0}.foot-row{align-items:flex-start;flex-direction:column}.foot-links{flex-wrap:wrap}.caption{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+</style>
+<style>
+:root{--muted:#8b9891}.nav-links .button:hover{color:#07130c}.node small,.object small,.tag,.side-label{font-size:11px}.node p,.object p,.legend span,.orbit-item span,.mini-card span,.portrait span{font-size:12px}.sample-note{display:block;margin-top:7px;color:var(--muted);font-size:11px}.family-lines{display:grid;gap:0;margin-top:18px}.family-person{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:15px 0;border-top:1px solid rgba(15,30,22,.18)}.family-person i{width:38px;height:38px;border:1px solid rgba(15,30,22,.28);display:grid;place-items:center;border-radius:50%;font-style:normal;font:700 12px Manrope,sans-serif}.family-person b{font-family:Georgia,serif;font-size:15px}.family-person span{font-size:11px;color:#58625d}.board .line{animation:line-in .9s var(--ease) both}.board .ln2{animation-delay:.12s}.board .ln3{animation-delay:.24s}.board .ln4{animation-delay:.36s}.canvas path,.orbit path{stroke-dasharray:1200;stroke-dashoffset:1200;animation:path-in 1.4s var(--ease) .25s forwards}@keyframes line-in{from{scale:0 1}}@keyframes path-in{to{stroke-dashoffset:0}}
+@media(max-width:680px){.wrap{width:calc(100% - 30px)}.hero h1{font-size:clamp(36px,11vw,43px)}.scatter{display:grid;grid-template-columns:1fr 1fr;gap:10px;min-height:0}.scrap,.result{position:static;transform:none;width:auto}.result{grid-column:1/-1;margin-top:8px}.merge{display:none}.orbit{display:grid;grid-template-columns:1fr 1fr;gap:10px;min-height:0}.orbit svg{display:none}.person-core{position:static;transform:none;width:auto;grid-column:1/-1}.orbit-item{position:static;width:auto}.canvas svg{opacity:.55}.family-person{grid-template-columns:38px 1fr}.family-person span{grid-column:2}.nav-links{margin-left:auto}.nav-cta{padding-inline:13px}}
+@media(prefers-reduced-motion:reduce){.board .line,.canvas path,.orbit path{animation:none;stroke-dashoffset:0}}
+</style>
+<style>
+.family-lines{position:relative;padding-left:18px}.family-lines::before{content:"";position:absolute;left:0;top:30px;bottom:30px;border-left:1px solid rgba(15,30,22,.35)}.family-person{position:relative}.family-person::before{content:"";position:absolute;left:-18px;width:18px;border-top:1px solid rgba(15,30,22,.35)}.finish-side .sample-note{color:#56635c}.scatter .scrap{animation:gather .8s var(--ease) both}.scatter .result{animation:resolve .8s var(--ease) .4s both}@keyframes gather{from{opacity:.55;translate:0 -10px}}@keyframes resolve{from{opacity:0;translate:18px 0}}.canvas path:nth-child(2),.canvas path:nth-child(4){stroke-dasharray:9 8;stroke-dashoffset:0;animation:none}
+@media(max-width:680px){.board .object p{display:none}.board .n3{bottom:96px}.board .note{bottom:98px}.board .n2{top:184px}.legend{font-size:11px}.canvas svg{display:none}}
+@media(prefers-reduced-motion:reduce){.scatter .scrap,.scatter .result{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+<div class="wrap nav">
+<a class="brand" href="#top" aria-label="GeneoGraph home">
+<img src="assets/logo.svg" alt="">
+<span>GeneoGraph</span>
+</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="#how">How it works</a>
+<a href="#about">About</a>
+<a class="button nav-cta" href="https://demo.geneograph.com">Try Demo ↗</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="wrap hero-grid">
+<div>
+<p class="category">GENEALOGY RESEARCH &amp; VISUALIZATION SOFTWARE</p>
+<h1>Organize your genealogy research.<br>Visualize what isn’t proven yet.</h1>
+<p class="hero-copy">Keep people, documents, notes, sources and research hypotheses connected in one workspace—and explore uncertain branches without treating every idea as an established fact.</p>
+<div class="actions">
+<a class="button" href="https://demo.geneograph.com">Try Demo ↗</a>
+<a class="text-link" href="#how">See how it works ↓</a>
+</div>
+<p class="meta">No account required · Sample project included · Best explored on desktop</p>
+</div>
+<div class="product-window" role="img" aria-label="Geneograph research board showing confirmed and possible relationships, an unknown person, evidence and a research note">
+<div class="window-top">
+<span class="window-brand">Whiskerfield research · Illustrative sample</span>
+<span class="window-tools" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</span>
+</div>
+<div class="board">
+<span class="caption">Working research board</span>
+<i class="line ln1">
+</i>
+<i class="line dashed ln2">
+</i>
+<i class="line ln3">
+</i>
+<i class="line dashed ln4">
+</i>
+<article class="node confirm n1">
+<small>Confirmed person</small>
+<strong>Barnaby Whiskerfield</strong>
+<p>Born 14 Feb 1946 · Pawford</p>
+</article>
+<article class="object doc">
+<small>Supporting evidence</small>
+<strong>Household register</strong>
+<p>Pawford district · 1951</p>
+</article>
+<article class="node possible n2">
+<small>Unknown person</small>
+<strong>“I. Whiskerfield”</strong>
+<p>Identity under investigation</p>
+</article>
+<article class="node confirm n3">
+<small>Confirmed person</small>
+<strong>Silver Whiskerfield</strong>
+<p>4 photos · 5 notes · 1 source</p>
+</article>
+<article class="object note">
+<small>Research note</small>
+<strong>Possible Purrington link</strong>
+<p>Compare address and witness names.</p>
+</article>
+<div class="legend">
+<span>
+<i>
+</i> Confirmed relationship</span>
+<span>
+<i class="dash">
+</i> Possible relationship</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section fragment" id="how">
+<div class="wrap fragment-grid">
+<div>
+<h2>Your research is connected.<br>Your tools often aren’t.</h2>
+<p class="lead">GeneoGraph keeps the person, the evidence, the notes and the questions together—without forcing everything into the family tree itself.</p>
+</div>
+<div class="scatter" aria-label="Fragmented research materials becoming connected">
+<div class="scrap s1">
+<b>Family tree</b>People and conclusions</div>
+<div class="scrap s2">
+<b>Documents</b>Registers and certificates</div>
+<div class="scrap s3">
+<b>Notes</b>Transcriptions and clues</div>
+<div class="scrap s4">
+<b>Photos + screenshots</b>Visual evidence</div>
+<div class="scrap s5">
+<b>Research questions</b>What still needs proving?</div>
+<div class="merge" aria-hidden="true">
+</div>
+<div class="result">
+<small>CONNECTED IN GENEOGRAPH</small>
+<strong>Silver Whiskerfield</strong>
+<p>Person · evidence · place · working hypothesis</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section uncertainty">
+<div class="wrap">
+<h2>Not every branch is certain.</h2>
+<p class="lead">Genealogy research often lives somewhere between “I know” and “I think.”</p>
+<p class="statement">Your tree records conclusions.<br>
+<span>Geneograph gives you somewhere to think.</span>
+</p>
+<div class="research-map">
+<aside class="key" aria-label="Research board key">
+<div>
+<strong>CONFIRMED</strong>
+<p>Solid connection</p>
+</div>
+<div>
+<strong>POSSIBLE</strong>
+<p>Dashed hypothesis</p>
+</div>
+<div>
+<strong>UNKNOWN</strong>
+<p>Named placeholder</p>
+</div>
+<div>
+<strong>EVIDENCE</strong>
+<p>Source or record</p>
+</div>
+<div>
+<strong>NOTE</strong>
+<p>Working interpretation</p>
+</div>
+</aside>
+<div class="canvas" role="img" aria-label="Research board comparing confirmed facts and possible relationships">
+<svg viewBox="0 0 900 570" aria-hidden="true">
+<path d="M220 140 C340 160 370 250 470 285" fill="none" stroke="#5ed08a" stroke-width="2"/>
+<path d="M725 160 C650 190 615 220 530 280" fill="none" stroke="#d79a54" stroke-width="2" stroke-dasharray="9 8"/>
+<path d="M475 330 C410 385 325 410 225 475" fill="none" stroke="#81948a" stroke-width="2"/>
+<path d="M535 330 C610 390 680 410 740 470" fill="none" stroke="#d79a54" stroke-width="2" stroke-dasharray="9 8"/>
+</svg>
+<article class="node confirm c1">
+<small>Confirmed person</small>
+<strong>Daisy Milkpaw</strong>
+<p>Family record · 1949</p>
+<span class="tag">CONFIRMED</span>
+</article>
+<article class="node possible c2">
+<small>Unknown person</small>
+<strong>I. Whiskerfield</strong>
+<p>Initial found in register</p>
+<span class="tag amber">POSSIBLE</span>
+</article>
+<article class="node c3">
+<small>Research question</small>
+<strong>Who lived at 18 Furrow Lane?</strong>
+<p>Compare the 1951 and 1954 registers.</p>
+</article>
+<article class="node c4">
+<small>Supporting evidence</small>
+<strong>Household register</strong>
+<p>Pawford district · page 118</p>
+</article>
+<article class="node possible c5">
+<small>Research note</small>
+<strong>Could be Iris?</strong>
+<p>Age fits; surname partly illegible.</p>
+<span class="tag amber">WORKING INTERPRETATION</span>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="section connected">
+<div class="wrap connected-grid">
+<div>
+<h2>Keep the research around a person connected.</h2>
+<p class="lead">Move from a person to the records, images, places and working boards that give their story context—without hunting through separate folders.</p>
+</div>
+<div class="orbit" role="img" aria-label="A person connected to an archival document, photograph, note, place and Geneograph board">
+<svg viewBox="0 0 600 520" aria-hidden="true">
+<path d="M300 260L120 90M300 260L500 100M300 260L95 430M300 260L500 440M300 260L525 295" stroke="#476153" stroke-width="1.5" fill="none"/>
+</svg>
+<article class="person-core">
+<div class="avatar">SW</div>
+<h3>Silver Whiskerfield</h3>
+<p>Born 03 Mar 1998 · Pawford</p>
+</article>
+<div class="orbit-item o1">
+<b>Household register</b>
+<span>Archival document</span>
+</div>
+<div class="orbit-item o2">
+<b>Family portrait</b>
+<span>Photograph · 1952</span>
+</div>
+<div class="orbit-item o3">
+<b>Birthplace question</b>
+<span>Research note</span>
+</div>
+<div class="orbit-item o4">
+<b>Pawford, North Yorkshire</b>
+<span>Place</span>
+</div>
+<div class="orbit-item o5">
+<b>Purrington connection</b>
+<span>Geneograph board</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section output">
+<div class="wrap output-head">
+<h2>Research it.<br>Arrange it.<br>Share it.</h2>
+<p class="lead">Use the people and research already in the project. Arrange them freely, add photographs, evidence and annotations, and turn a complex case into something easier to understand.</p>
+</div>
+<div class="transformation">
+<div class="work-side">
+<span class="side-label">WORKING GENEOGRAPH BOARD</span>
+<div class="mini-family">
+<div class="mini-card m1">
+<b>Barnaby Whiskerfield</b>
+<span>Confirmed person</span>
+</div>
+<div class="mini-card m2">
+<b>Daisy Milkpaw</b>
+<span>Confirmed person</span>
+</div>
+<div class="mini-card m3">
+<b>Silver Whiskerfield</b>
+<span>4 photos · 5 notes</span>
+</div>
+</div>
+</div>
+<div class="transform-arrow" aria-hidden="true">→</div>
+<div class="finish-side">
+<span class="side-label">FINISHED FAMILY VISUAL</span>
+<div class="family-visual">
+<h3>The Whiskerfield line</h3>
+<span class="sample-note">Illustrative sample family</span>
+<div class="family-lines">
+<div class="family-person"><i>BW</i><b>Barnaby Whiskerfield</b><span>1946–2018</span></div>
+<div class="family-person"><i>DM</i><b>Daisy Milkpaw</b><span>1949–2020</span></div>
+<div class="family-person"><i>SW</i><b>Silver Whiskerfield</b><span>Born 1998</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="about">
+<div class="wrap">
+<div class="compact-grid">
+<div>
+<h2>For researchers whose work has outgrown a basic tree.</h2>
+</div>
+<p class="lead">GeneoGraph is being refined with feedback from amateur and professional genealogists.</p>
+</div>
+<div class="audiences">
+<article class="audience">
+<h3>SERIOUS FAMILY RESEARCHER</h3>
+<p>You already have a family tree plus folders, scans, notes and unresolved questions.</p>
+</article>
+<article class="audience">
+<h3>COMPLEX-CASE GENEALOGIST</h3>
+<p>You need to compare evidence and keep uncertain relationships visible.</p>
+</article>
+<article class="audience">
+<h3>FAMILY ARCHIVIST / STORYTELLER</h3>
+<p>You want to organize research and turn it into understandable visual material.</p>
+</article>
+</div>
+<div class="ownership">
+<h2>Designed around ownership.</h2>
+<div class="direction-list">
+<div>
+<b>Local projects</b>
+<span>The core product direction is designed around genealogy work living on your computer.</span>
+</div>
+<div>
+<b>Portable data</b>
+<span>Projects are intended to remain movable and under your control.</span>
+</div>
+<div>
+<b>Online services, optionally</b>
+<span>Future cloud services should complement local ownership rather than replace it.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section demo">
+<div class="wrap demo-grid">
+<div>
+<h2>See GeneoGraph in action.</h2>
+<p class="lead">Explore the interactive prototype using a prepared genealogy research project.</p>
+<div class="actions">
+<a class="button" href="https://demo.geneograph.com">Start Demo ↗</a>
+</div>
+<p class="meta">No account required · Sample project included · Best on desktop</p>
+</div>
+<ol class="demo-list">
+<li>Open a person and inspect their connected research.</li>
+<li>Explore an uncertain branch.</li>
+<li>Use a Geneograph board to compare possibilities.</li>
+<li>Move through evidence, notes and relationships.</li>
+</ol>
+</div>
+</section>
+<section class="section">
+<div class="wrap research-group">
+<div>
+<h2>Help shape GeneoGraph.</h2>
+<p class="lead">GeneoGraph is being refined with feedback from real genealogists. Join the research group to test emerging workflows and help influence what gets built next.</p>
+</div>
+<form class="signup" id="research-form">
+<label for="email">Email address</label>
+<div class="field-row">
+<input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+<button class="button" type="submit">Join the Research Group</button>
+</div>
+<p class="form-note">Prototype form: your address is saved on this device only and is not transmitted yet.</p>
+<p class="form-status" role="status" aria-live="polite">
+</p>
+</form>
+</div>
+</section>
+<section class="origin">
+<div class="wrap">
+<h2>Built from real genealogy research.</h2>
+<p>GeneoGraph grew from hands-on family-history research and the difficulty of keeping family trees, archival records, notes and unresolved questions organized across many different tools.</p>
+</div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap foot-row">
+<div>
+<a class="brand" href="#top">
+<img src="assets/logo.svg" alt="">
+<span>GeneoGraph</span>
+</a>
+<p class="quiet">Interactive prototype · GeneoGraph is currently in development.</p>
+</div>
+<nav class="foot-links" aria-label="Footer navigation">
+<a href="#how">How it works</a>
+<a href="https://demo.geneograph.com">Demo</a>
+<a href="#research-form">Research Group</a>
+<a href="#about">About</a>
+</nav>
+</div>
+</footer>
+<script>const form=document.querySelector('#research-form');form.addEventListener('submit',e=>{e.preventDefault();const email=form.email.value.trim();const status=form.querySelector('.form-status');if(!form.checkValidity()){form.reportValidity();return}localStorage.setItem('geneograph-research-interest',email);status.textContent='Thank you — your interest has been saved on this device for the prototype.';form.reset()});</script>
+</body>
+</html>
