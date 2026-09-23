@@ -43,29 +43,16 @@ jobs:
               with:
                   fetch-depth: 0
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v7
-              with:
-                  node-version-file: .node-version
-
-            - name: Cache dependencies
-              uses: actions/cache@v6
-              with:
-                  key: Landing-${{ hashFiles('package-lock.json') }}
-                  restore-keys: |
-                      Landing-${{ hashFiles('package-lock.json') }}
-                      Landing-
-                  path: |
-                      .npm/_cacache/
-                  enableCrossOsArchive: true
-
-            - name: Get dependencies
-              run: |
-                  npm clean-install
-
             - name: Build landing
               run: |
-                  npm run build
+                  mkdir `
+                      -p ${{ github.workspace }}/dist/
+                  cp `
+                      ${{ github.workspace }}/index.html `
+                      ${{ github.workspace }}/dist/index.html
+                  cp `
+                      ${{ github.workspace }}/logo.svg `
+                      ${{ github.workspace }}/dist/logo.svg
 
             - name: Upload landing
               id: deployment
