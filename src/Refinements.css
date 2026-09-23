@@ -1,0 +1,91 @@
+.family-lines {
+    position: relative;
+    padding-left: 18px
+}
+
+.family-lines::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30px;
+    bottom: 30px;
+    border-left: 1px solid rgba(15, 30, 22, .35)
+}
+
+.family-person {
+    position: relative
+}
+
+.family-person::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    width: 18px;
+    border-top: 1px solid rgba(15, 30, 22, .35)
+}
+
+.finish-side .sample-note {
+    color: #56635c
+}
+
+.scatter .scrap {
+    animation: gather .8s var(--ease) both
+}
+
+.scatter .result {
+    animation: resolve .8s var(--ease) .4s both
+}
+
+@keyframes gather {
+    from {
+        opacity: .55;
+        translate: 0 -10px
+    }
+}
+
+@keyframes resolve {
+    from {
+        opacity: 0;
+        translate: 18px 0
+    }
+}
+
+.canvas path:nth-child(2),
+.canvas path:nth-child(4) {
+    stroke-dasharray: 9 8;
+    stroke-dashoffset: 0;
+    animation: none
+}
+
+@media(max-width:680px) {
+    .board .object p {
+        display: none
+    }
+
+    .board .n3 {
+        bottom: 96px
+    }
+
+    .board .note {
+        bottom: 98px
+    }
+
+    .board .n2 {
+        top: 184px
+    }
+
+    .legend {
+        font-size: 11px
+    }
+
+    .canvas svg {
+        display: none
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .scatter .scrap,
+    .scatter .result {
+        animation: none
+    }
+}
