@@ -48,11 +48,8 @@ jobs:
                   mkdir `
                       -p ${{ github.workspace }}/dist/
                   cp `
-                      ${{ github.workspace }}/index.html `
-                      ${{ github.workspace }}/dist/index.html
-                  cp `
-                      ${{ github.workspace }}/logo.svg `
-                      ${{ github.workspace }}/dist/logo.svg
+                      ${{ github.workspace }}/src/* `
+                      ${{ github.workspace }}/dist/
 
             - name: Upload landing
               id: deployment
