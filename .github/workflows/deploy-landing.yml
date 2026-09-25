@@ -47,9 +47,10 @@ jobs:
               run: |
                   mkdir `
                       -p ${{ github.workspace }}/dist/
-                  cp `
-                      ${{ github.workspace }}/src/* `
-                      ${{ github.workspace }}/dist/
+                  Copy-Item `
+                      -Path ${{ github.workspace }}/src/* `
+                      -Destination ${{ github.workspace }}/dist/ `
+                      -Recurse
 
             - name: Upload landing
               id: deployment
