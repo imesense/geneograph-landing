@@ -38,11 +38,12 @@ components:
 
 ## Overview
 
-**Creative North Star: "Different research spaces, one connected project."**
+The creative north star is **"Different research spaces, one connected project."**
 
 The page feels like a calm, capable genealogy workspace. Its first product view is a real prototype capture of Family Tree and connected person information together; later sections give People, Archive, Albums, Notes and Geneograph distinct space. The established charcoal and green identity remains intact.
 
-**Key Characteristics:**
+Key characteristics:
+
 - Whole-application proof from the actual prototype before individual module detail.
 - Meaningful geometry rather than decorative networks.
 - Distinct module views inside a connected visual system.
